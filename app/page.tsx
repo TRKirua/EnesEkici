@@ -600,39 +600,12 @@ function Experience() {
 function Projects() {
   const projects = [
     {
-      title: "MNIST Character Recognition",
-      description:
-        "Built a multi-layer perceptron (MLP) using TensorFlow to classify handwritten digits from the MNIST dataset. Implemented normalization, dropout, and softmax output to optimize multi-class classification accuracy.",
-      tags: ["TensorFlow", "Python", "Machine Learning", "MLP"],
-      category: "Machine Learning",
-      gradient: "from-purple-500 to-pink-500",
-      githubUrl: "https://github.com/TRKirua/mnist-character-recognition",
-    },
-    {
-      title: "CNN Dog Cat Classification",
-      description:
-        "Developed a convolutional neural network (CNN) using TensorFlow to classify images of dogs and cats. Implemented data augmentation, batch normalization, and transfer learning techniques to achieve high accuracy in binary image classification.",
-      tags: ["TensorFlow", "Python", "Machine Learning", "CNN"],
-      category: "Machine Learning",
-      gradient: "from-indigo-500 to-purple-500",
-      githubUrl: "https://github.com/TRKirua/cnn-dog-cat-classification",
-    },
-    {
-      title: "AI Solutions for Consulting",
-      description:
-        "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
-      tags: ["AI", "LLM", "Consulting", "Market Analysis"],
-      category: "AI & Consulting",
-      gradient: "from-blue-500 to-cyan-500",
-      githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
-    },
-    {
       title: "42sh",
       description:
         "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
       tags: ["C", "POSIX", "Shell", "System Programming"],
       category: "System Programming",
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-blue-950 to-cyan-300",
       githubUrl: "https://github.com/TRKirua/42sh",
     },
     {
@@ -641,8 +614,17 @@ function Projects() {
         "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
       tags: ["Java", "IDE", "Git", "Maven", "GUI"],
       category: "Development Tools",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-red-950 to-orange-500",
       githubUrl: "https://github.com/TRKirua/java-ide",
+    },
+    {
+      title: "AI Solutions for Consulting",
+      description:
+        "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
+      tags: ["AI", "LLM", "Consulting", "Market Analysis"],
+      category: "AI & Consulting",
+      gradient: "from-lime-950 to-emerald-400",
+      githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
     },
     {
       title: "Melocas' Ire",
@@ -650,8 +632,26 @@ function Projects() {
         "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
       tags: ["Unity", "C#", "Game Development", "2D Platformer"],
       category: "Game Development",
-      gradient: "from-violet-500 to-purple-500",
+      gradient: "from-violet-950 to-purple-400",
       githubUrl: "https://github.com/TRKirua/melocas-ire",
+    },
+    {
+      title: "MNIST Character Recognition",
+      description:
+        "Built a multi-layer perceptron (MLP) using TensorFlow to classify handwritten digits from the MNIST dataset. Implemented normalization, dropout, and softmax output to optimize multi-class classification accuracy.",
+      tags: ["TensorFlow", "Python", "Machine Learning", "MLP"],
+      category: "Machine Learning",
+      gradient: "from-yellow-700 to-yellow-300",
+      githubUrl: "https://github.com/TRKirua/mnist-character-recognition",
+    },
+    {
+      title: "CNN Dog Cat Classification",
+      description:
+        "Developed a convolutional neural network (CNN) using TensorFlow to classify images of dogs and cats. Implemented data augmentation, batch normalization, and transfer learning techniques to achieve high accuracy in binary image classification.",
+      tags: ["TensorFlow", "Python", "Machine Learning", "CNN"],
+      category: "Machine Learning",
+      gradient: "from-fuchsia-950 to-pink-400",
+      githubUrl: "https://github.com/TRKirua/cnn-dog-cat-classification",
     },
   ]
 
