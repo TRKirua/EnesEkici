@@ -31,15 +31,9 @@ import { Card, CardContent } from "@/components/ui/card"
 // Dynamic Background Component
 function DynamicBackground({ isActive }: { isActive: boolean }) {
   const [scrollY, setScrollY] = useState(0)
-  const [shapesVisible, setShapesVisible] = useState(false)
 
   useEffect(() => {
     if (!isActive) return
-
-    // Délai avant que les formes commencent à apparaître
-    const shapeTimer = setTimeout(() => {
-      setShapesVisible(true)
-    }, 500)
 
     const handleScroll = () => {
       setScrollY(window.scrollY)
@@ -48,7 +42,6 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
     window.addEventListener("scroll", handleScroll)
 
     return () => {
-      clearTimeout(shapeTimer)
       window.removeEventListener("scroll", handleScroll)
     }
   }, [isActive])
@@ -58,19 +51,18 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Animated Grid Lines */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-1000 ${shapesVisible ? "opacity-100" : "opacity-0"}`}
-      >
+      <div className="absolute inset-0">
         {/* Horizontal Lines */}
         {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={`h-${i}`}
-            className="absolute h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent animate-grid-horizontal"
+            className="absolute h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent animate-grid-horizontal opacity-0"
             style={{
               top: `${12.5 * (i + 1)}%`,
               left: "0%",
               right: "0%",
-              animationDelay: `${i * 0.2 + 0.5}s`,
+              animationDelay: `${i * 0.2 + 1.5}s`,
+              animationFillMode: "forwards",
               transform: `translateX(${Math.sin(scrollY * 0.005 + i) * 20}px)`,
             }}
           />
@@ -80,12 +72,13 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
         {Array.from({ length: 12 }).map((_, i) => (
           <div
             key={`v-${i}`}
-            className="absolute w-px bg-gradient-to-b from-transparent via-purple-500/20 to-transparent animate-grid-vertical"
+            className="absolute w-px bg-gradient-to-b from-transparent via-purple-500/20 to-transparent animate-grid-vertical opacity-0"
             style={{
               left: `${8.33 * (i + 1)}%`,
               top: "0%",
               bottom: "0%",
-              animationDelay: `${i * 0.15 + 0.7}s`,
+              animationDelay: `${i * 0.15 + 1.7}s`,
+              animationFillMode: "forwards",
               transform: `translateY(${Math.cos(scrollY * 0.005 + i) * 15}px)`,
             }}
           />
@@ -95,34 +88,34 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={`d-${i}`}
-            className="absolute bg-gradient-to-br from-transparent via-emerald-500/15 to-transparent animate-diagonal-slide"
+            className="absolute bg-gradient-to-br from-transparent via-emerald-500/15 to-transparent animate-diagonal-slide opacity-0"
             style={{
               width: "200%",
               height: "2px",
               top: `${16.66 * (i + 1)}%`,
               left: "-50%",
               transform: `rotate(45deg) translateX(${Math.sin(scrollY * 0.002 + i) * 50}px)`,
-              animationDelay: `${i * 0.3 + 1}s`,
+              animationDelay: `${i * 0.3 + 2}s`,
+              animationFillMode: "forwards",
             }}
           />
         ))}
       </div>
 
       {/* Dynamic Geometric Shapes */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-1500 ${shapesVisible ? "opacity-100" : "opacity-0"}`}
-      >
+      <div className="absolute inset-0">
         {/* Expanding Circles */}
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={`circle-${i}`}
-            className="absolute rounded-full border border-cyan-400/20 animate-expand-contract"
+            className="absolute rounded-full border border-cyan-400/20 animate-expand-contract opacity-0"
             style={{
               width: `${100 + i * 50}px`,
               height: `${100 + i * 50}px`,
               top: `${20 + i * 15}%`,
               left: `${10 + i * 20}%`,
-              animationDelay: `${i * 0.5 + 1.2}s`,
+              animationDelay: `${i * 0.5 + 2.3}s`,
+              animationFillMode: "forwards",
               transform: `scale(${1 + Math.sin(scrollY * 0.005 + i) * 0.2})`,
             }}
           />
@@ -132,13 +125,14 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
         {Array.from({ length: 4 }).map((_, i) => (
           <div
             key={`square-${i}`}
-            className="absolute border border-purple-400/20 animate-rotate-scale"
+            className="absolute border border-purple-400/20 animate-rotate-scale opacity-0"
             style={{
               width: `${60 + i * 30}px`,
               height: `${60 + i * 30}px`,
               top: `${30 + i * 20}%`,
               right: `${15 + i * 15}%`,
-              animationDelay: `${i * 0.4 + 1.5}s`,
+              animationDelay: `${i * 0.4 + 2.5}s`,
+              animationFillMode: "forwards",
               transform: `rotate(${scrollY * 0.05 + i * 45}deg) scale(${1 + Math.cos(scrollY * 0.004 + i) * 0.3})`,
             }}
           />
@@ -148,7 +142,7 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={`hex-${i}`}
-            className="absolute animate-morph-shape"
+            className="absolute animate-morph-shape opacity-0"
             style={{
               width: `${80 + i * 40}px`,
               height: `${80 + i * 40}px`,
@@ -156,7 +150,8 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
               left: `${30 + i * 25}%`,
               clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
               background: `linear-gradient(${45 + i * 60}deg, rgba(34, 197, 94, 0.1), rgba(168, 85, 247, 0.1))`,
-              animationDelay: `${i * 0.6 + 1.8}s`,
+              animationDelay: `${i * 0.6 + 2.7}s`,
+              animationFillMode: "forwards",
               transform: `rotate(${scrollY * 0.025 + i * 30}deg) scale(${1 + Math.sin(scrollY * 0.003 + i) * 0.4})`,
             }}
           />
@@ -164,47 +159,49 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
       </div>
 
       {/* Particle System */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-2000 ${shapesVisible ? "opacity-100" : "opacity-0"}`}
-      >
+      <div className="absolute inset-0">
         {Array.from({ length: 20 }).map((_, i) => (
           <div
             key={`particle-${i}`}
-            className="absolute w-1 h-1 bg-white/30 rounded-full animate-float-particle"
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-float-particle opacity-0"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5 + 2}s`,
+              animationDelay: `${Math.random() * 5 + 3}s`,
               animationDuration: `${3 + Math.random() * 4}s`,
+              animationFillMode: "forwards",
             }}
           />
         ))}
       </div>
 
       {/* Scanning Lines */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-1000 ${shapesVisible ? "opacity-100" : "opacity-0"}`}
-      >
+      <div className="absolute inset-0">
         <div
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-scan-horizontal"
-          style={{ animationDelay: "2.5s" }}
+          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-scan-horizontal opacity-0"
+          style={{
+            animationDelay: "3.5s",
+            animationFillMode: "forwards",
+          }}
         />
         <div
-          className="absolute h-full w-px bg-gradient-to-b from-transparent via-purple-400/50 to-transparent animate-scan-vertical"
-          style={{ animationDelay: "2.8s" }}
+          className="absolute h-full w-px bg-gradient-to-b from-transparent via-purple-400/50 to-transparent animate-scan-vertical opacity-0"
+          style={{
+            animationDelay: "3.7s",
+            animationFillMode: "forwards",
+          }}
         />
       </div>
 
       {/* Glitch Effect Overlay */}
-      <div
-        className={`absolute inset-0 opacity-20 transition-opacity duration-1500 ${shapesVisible ? "opacity-20" : "opacity-0"}`}
-      >
+      <div className="absolute inset-0 opacity-0">
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={`glitch-${i}`}
-            className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 animate-glitch-effect"
+            className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 animate-glitch-effect opacity-0"
             style={{
-              animationDelay: `${i * 0.1 + 3}s`,
+              animationDelay: `${i * 0.1 + 4}s`,
+              animationFillMode: "forwards",
               mixBlendMode: "screen",
             }}
           />
@@ -216,55 +213,66 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
 
 // Floating Shapes Component (Enhanced)
 function FloatingShapes({ isActive }: { isActive: boolean }) {
-  const [shapesVisible, setShapesVisible] = useState(false)
-
-  useEffect(() => {
-    if (!isActive) return
-
-    // Délai avant que les formes flottantes commencent à apparaître
-    const timer = setTimeout(() => {
-      setShapesVisible(true)
-    }, 800)
-
-    return () => clearTimeout(timer)
-  }, [isActive])
-
   if (!isActive) return null
 
   return (
     <div className="fixed inset-0 pointer-events-none z-10">
       {/* Enhanced floating geometric shapes avec apparition progressive */}
       <div
-        className={`absolute top-20 right-20 w-8 h-8 border-2 border-cyan-400/40 rotate-45 animate-float-complex transition-opacity duration-1000 ${shapesVisible ? "opacity-30" : "opacity-0"}`}
-        style={{ transitionDelay: "0.1s" }}
+        className="absolute top-20 right-20 w-8 h-8 border-2 border-cyan-400/40 rotate-45 animate-float-complex opacity-0"
+        style={{
+          animationDelay: "2s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute top-40 left-10 w-6 h-6 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full animate-float-orbit transition-opacity duration-1000 ${shapesVisible ? "opacity-25" : "opacity-0"}`}
-        style={{ transitionDelay: "0.3s" }}
+        className="absolute top-40 left-10 w-6 h-6 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full animate-float-orbit opacity-0"
+        style={{
+          animationDelay: "2.2s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute top-60 right-1/4 w-4 h-4 border border-emerald-400/35 rotate-12 animate-float-spiral transition-opacity duration-1000 ${shapesVisible ? "opacity-30" : "opacity-0"}`}
-        style={{ transitionDelay: "0.5s" }}
+        className="absolute top-60 right-1/4 w-4 h-4 border border-emerald-400/35 rotate-12 animate-float-spiral opacity-0"
+        style={{
+          animationDelay: "2.4s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute bottom-40 left-20 w-10 h-10 border-2 border-blue-400/40 rounded-lg rotate-12 animate-float-pendulum transition-opacity duration-1000 ${shapesVisible ? "opacity-25" : "opacity-0"}`}
-        style={{ transitionDelay: "0.7s" }}
+        className="absolute bottom-40 left-20 w-10 h-10 border-2 border-blue-400/40 rounded-lg rotate-12 animate-float-pendulum opacity-0"
+        style={{
+          animationDelay: "2.6s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute bottom-60 right-16 w-5 h-5 bg-gradient-to-tr from-cyan-500/30 to-blue-500/30 rotate-45 animate-float-wave transition-opacity duration-1000 ${shapesVisible ? "opacity-30" : "opacity-0"}`}
-        style={{ transitionDelay: "0.9s" }}
+        className="absolute bottom-60 right-16 w-5 h-5 bg-gradient-to-tr from-cyan-500/30 to-blue-500/30 rotate-45 animate-float-wave opacity-0"
+        style={{
+          animationDelay: "2.8s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute top-1/3 left-1/3 w-7 h-7 border border-purple-400/35 rounded-full animate-float-bounce transition-opacity duration-1000 ${shapesVisible ? "opacity-25" : "opacity-0"}`}
-        style={{ transitionDelay: "1.1s" }}
+        className="absolute top-1/3 left-1/3 w-7 h-7 border border-purple-400/35 rounded-full animate-float-bounce opacity-0"
+        style={{
+          animationDelay: "3s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute bottom-1/4 right-1/3 w-3 h-3 bg-gradient-to-bl from-emerald-500/30 to-teal-500/30 animate-float-zigzag transition-opacity duration-1000 ${shapesVisible ? "opacity-30" : "opacity-0"}`}
-        style={{ transitionDelay: "1.3s" }}
+        className="absolute bottom-1/4 right-1/3 w-3 h-3 bg-gradient-to-bl from-emerald-500/30 to-teal-500/30 animate-float-zigzag opacity-0"
+        style={{
+          animationDelay: "3.2s",
+          animationFillMode: "forwards",
+        }}
       ></div>
       <div
-        className={`absolute top-3/4 left-1/4 w-9 h-9 border-2 border-pink-400/40 rounded-lg rotate-30 animate-float-figure8 transition-opacity duration-1000 ${shapesVisible ? "opacity-25" : "opacity-0"}`}
-        style={{ transitionDelay: "1.5s" }}
+        className="absolute top-3/4 left-1/4 w-9 h-9 border-2 border-pink-400/40 rounded-lg rotate-30 animate-float-figure8 opacity-0"
+        style={{
+          animationDelay: "3.4s",
+          animationFillMode: "forwards",
+        }}
       ></div>
     </div>
   )
@@ -1069,7 +1077,7 @@ export default function Portfolio() {
       // Délai supplémentaire pour activer les animations après le loading
       setTimeout(() => {
         setAnimationsActive(true)
-      }, 300)
+      }, 800) // Augmenté de 300ms à 800ms
     }, 1500)
 
     return () => clearTimeout(timer)
