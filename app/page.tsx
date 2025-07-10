@@ -1074,10 +1074,9 @@ export default function Portfolio() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-      // Délai supplémentaire pour activer les animations après le loading
       setTimeout(() => {
         setAnimationsActive(true)
-      }, 800) // Augmenté de 300ms à 800ms
+      }, 400)
     }, 1500)
 
     return () => clearTimeout(timer)
