@@ -608,6 +608,15 @@ function Experience() {
 function Projects() {
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      description:
+        "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
+      tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
+      category: "System Programming",
+      gradient: "from-stone-800 to-stone-200",
+      githubUrl: "https://github.com/TRKirua/42sh",
+    },
+    {
       title: "42sh",
       description:
         "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
@@ -635,15 +644,6 @@ function Projects() {
       githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
     },
     {
-      title: "Melocas' Ire",
-      description:
-        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
-      tags: ["Unity", "C#", "Game Development", "2D Platformer"],
-      category: "Game Development",
-      gradient: "from-violet-950 to-purple-400",
-      githubUrl: "https://github.com/TRKirua/melocas-ire",
-    },
-    {
       title: "MNIST Character Recognition",
       description:
         "Built a multi-layer perceptron (MLP) using TensorFlow to classify handwritten digits from the MNIST dataset. Implemented normalization, dropout, and softmax output to optimize multi-class classification accuracy.",
@@ -660,6 +660,15 @@ function Projects() {
       category: "Machine Learning",
       gradient: "from-fuchsia-950 to-pink-400",
       githubUrl: "https://github.com/TRKirua/cnn-dog-cat-classification",
+    },
+    {
+      title: "Melocas' Ire",
+      description:
+        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
+      tags: ["Unity", "C#", "Game Development", "2D Platformer"],
+      category: "Game Development",
+      gradient: "from-violet-950 to-purple-400",
+      githubUrl: "https://github.com/TRKirua/melocas-ire",
     },
   ]
 
