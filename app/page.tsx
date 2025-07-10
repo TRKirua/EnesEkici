@@ -427,7 +427,7 @@ function Hero() {
 
         {/* Name - Same line, smaller */}
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none tracking-tight animate-fade-in-up animation-delay-300">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none tracking-tight animate-fade-in-up animation-delay-50">
             <span className="text-white drop-shadow-2xl mr-4">ENES</span>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
               EKICI
@@ -436,7 +436,7 @@ function Hero() {
         </div>
 
         {/* Social Links - Ordered: Mail, Phone, LinkedIn, GitHub */}
-        <div className="flex justify-center space-x-6 animate-fade-in-up animation-delay-600">
+        <div className="flex justify-center space-x-6 animate-fade-in-up animation-delay-50">
           <a
             href="mailto:enesekici6868@gmail.com"
             className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:border-purple-400 hover:bg-purple-500/10"
@@ -468,7 +468,7 @@ function Hero() {
         </div>
 
         {/* Scroll Indicator - Centered below social links */}
-        <div className="text-center animate-fade-in-up animation-delay-900 pt-8">
+        <div className="text-center animate-fade-in-up animation-delay-200 pt-8">
           <div className="text-gray-400 text-sm uppercase tracking-wider mb-4 font-medium">Scroll to Explore</div>
           <div className="animate-bounce">
             <div className="w-8 h-8 border-2 border-gray-600 rounded-full flex items-center justify-center mx-auto hover:border-cyan-400 transition-colors duration-300">
