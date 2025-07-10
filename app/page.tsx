@@ -612,9 +612,9 @@ function Projects() {
       description:
         "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
       tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
-      category: "System Programming",
+      category: "Web Development",
       gradient: "from-stone-800 to-stone-200",
-      githubUrl: "https://github.com/TRKirua/42sh",
+      githubUrl: "https://github.com/TRKirua/EnesEkici",
     },
     {
       title: "42sh",
