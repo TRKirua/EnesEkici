@@ -12,6 +12,7 @@ import {
   X,
   Calendar,
   Building,
+  School,
   Github,
   Code,
   Database,
@@ -175,24 +176,6 @@ function DynamicBackground({ isActive }: { isActive: boolean }) {
         ))}
       </div>
 
-      {/* Scanning Lines */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-scan-horizontal opacity-0"
-          style={{
-            animationDelay: "3.5s",
-            animationFillMode: "forwards",
-          }}
-        />
-        <div
-          className="absolute h-full w-px bg-gradient-to-b from-transparent via-purple-400/50 to-transparent animate-scan-vertical opacity-0"
-          style={{
-            animationDelay: "3.7s",
-            animationFillMode: "forwards",
-          }}
-        />
-      </div>
-
       {/* Glitch Effect Overlay */}
       <div className="absolute inset-0 opacity-0">
         {Array.from({ length: 3 }).map((_, i) => (
@@ -329,7 +312,7 @@ function LoadingScreen() {
           <div className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full animate-loading-bar"></div>
         </div>
 
-        {/* Loading Text - PAS D'ANIMATION */}
+        {/* Loading Text */}
         <div className="text-gray-400 text-lg font-light">Loading...</div>
       </div>
     </div>
@@ -360,24 +343,24 @@ function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/90 backdrop-blur-md border-b border-gray-800" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 font-mono h-px border-none ${
+        scrolled ? "bg-black/90 backdrop-blur-md border-b border-gray-800" : "bg-black/30 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-auto">
+        <div className="flex w-full items-center justify-between rounded-md my-1.5 py-1.5 px-5 gap-x-0 flex-row font-normal leading-7 tracking-normal">
           <div className="text-2xl font-bold">
             <span className="text-white">Enes</span>
-            <span className="text-gray-400">Ekici</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Ekici</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="md:flex space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                className="text-white-300 hover:text-white transition-colors duration-200 relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -416,12 +399,12 @@ function Navigation() {
 // New Simple Hero Component
 function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center relative px-4 font-mono">
       <div className="text-center space-y-8 relative z-20">
         {/* Available for Work Badge */}
         <div className="flex items-center justify-center space-x-3 animate-fade-in-up">
           <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse-slow"></div>
-          <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider">Available for Work</span>
+          <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider font-mono">Available for Work</span>
           <div className="flex-1 h-px bg-gradient-to-r from-emerald-400 to-transparent"></div>
         </div>
 
@@ -439,40 +422,42 @@ function Hero() {
         <div className="flex justify-center space-x-6 animate-fade-in-up animation-delay-50">
           <a
             href="mailto:enesekici6868@gmail.com"
-            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:border-purple-400 hover:bg-purple-500/10"
+            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-200 transform hover:scale-110 hover:shadow-xl hover:border-purple-400 hover:bg-purple-500/10"
           >
-            <Mail size={24} className="text-gray-400 group-hover:text-purple-400 transition-colors duration-300" />
+            <Mail size={24} className="text-gray-400 group-hover:text-purple-400 transition-colors duration-200" />
           </a>
           <a
             href="tel:+33769359393"
-            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:border-emerald-400 hover:bg-emerald-500/10"
+            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-200 transform hover:scale-110 hover:shadow-xl hover:border-emerald-400 hover:bg-emerald-500/10"
           >
-            <Phone size={24} className="text-gray-400 group-hover:text-emerald-400 transition-colors duration-300" />
+            <Phone size={24} className="text-gray-400 group-hover:text-emerald-400 transition-colors duration-200" />
           </a>
           <a
             href="https://www.linkedin.com/in/enes-ekici/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:border-blue-400 hover:bg-blue-500/10"
+            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-200 transform hover:scale-110 hover:shadow-xl hover:border-blue-400 hover:bg-blue-500/10"
           >
-            <Linkedin size={24} className="text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
+            <Linkedin size={24} className="text-gray-400 group-hover:text-blue-400 transition-colors duration-200" />
           </a>
           <a
             href="https://github.com/TRKirua"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:border-red-400 hover:bg-red-500/10"
+            className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-200 transform hover:scale-110 hover:shadow-xl hover:border-red-400 hover:bg-red-500/10"
           >
-            <Github size={24} className="text-gray-400 group-hover:text-red-400 transition-colors duration-300" />
+            <Github size={24} className="text-gray-400 group-hover:text-red-400 transition-colors duration-200" />
           </a>
         </div>
 
         {/* Scroll Indicator - Centered below social links */}
-        <div className="text-center animate-fade-in-up animation-delay-200 pt-8">
-          <div className="text-gray-400 text-sm uppercase tracking-wider mb-4 font-medium">Scroll to Explore</div>
+        <div className="text-center animate-fade-in-up relative top-20 pt-8">
           <div className="animate-bounce">
-            <div className="w-8 h-8 border-2 border-gray-600 rounded-full flex items-center justify-center mx-auto hover:border-cyan-400 transition-colors duration-300">
-              <ArrowDown size={16} className="text-gray-400" />
+            <div className="text-gray-400 text-sm uppercase tracking-wider mb-4 font-medium">Scroll to Explore</div>
+              <div className="animate-bounce">
+                <div className="w-8 h-8 border-2 border-gray-700 rounded-full flex items-center justify-center mx-auto">
+                <ArrowDown size={16} className="text-gray-400" />
+              </div>
             </div>
           </div>
         </div>
@@ -490,7 +475,7 @@ function Experience() {
       companyUrl: "https://www.swiss-as.com/",
       period: "02.2025 - 08.2025",
       location: "Basel, Switzerland",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-950 to-cyan-300",
       description: [
         "Identified key behavioural analyses to support data-driven decisions by Product Owners and Managers.",
         "Designed and implemented custom trackers in the Flutter codebase to capture real-time user behaviour in the company's mobile application.",
@@ -504,7 +489,7 @@ function Experience() {
       companyUrl: "https://www.epita.fr/",
       period: "02.2024 - 06.2024",
       location: "Paris, France",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-red-950 to-orange-500",
       description: [
         "Led a 10-person student team on collaborative projects with external companies",
         "Organized and ran meetings with partner companies to define project scopes",
@@ -517,7 +502,7 @@ function Experience() {
       companyUrl: "https://mbt-consulting.com",
       period: "09.2023 - 01.2024",
       location: "Mulhouse, France",
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-lime-950 to-emerald-400",
       description: [
         "Rebuilt the company website by replacing restrictive widgets with custom HTML modules for improved flexibility and maintainability.",
         "Deployed and configured Systancia Gate (standalone and clustered), Cleanroom, Workplace (cloud and on-prem), and Identity (on-prem).",
@@ -527,11 +512,11 @@ function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-24 bg-black relative z-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="experience" className="py-24 relative z-20">
+      <div className="max-w-6xl px-4 mx-auto font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <Briefcase className="text-cyan-400" size={40} />
+            <Briefcase className="text-cyan-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Professional Experience</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
@@ -542,9 +527,9 @@ function Experience() {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div
+            <Card
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-gray-600/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90"
+              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                 <div className="flex-1">
@@ -558,25 +543,25 @@ function Experience() {
                       href={exp.companyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 hover:text-white transition-colors duration-300 relative z-30"
+                      className="inline-flex items-center space-x-2 hover:text-white transition-colors z-30"
                     >
-                      <h4 className="text-xl text-gray-300 font-semibold hover:text-white transition-colors duration-300">
+                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">
                         {exp.company}
                       </h4>
                       <ExternalLink
                         size={16}
-                        className="text-gray-400 hover:text-white transition-colors duration-300"
+                        className="shrink-0 self-center text-gray-400 hover:text-white transition-colors"
                       />
                     </a>
                   </div>
                 </div>
                 <div className="flex flex-col lg:items-end space-y-2 mt-4 lg:mt-0">
-                  <div className="flex items-center text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">
-                    <Calendar size={16} className="mr-2" />
+                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
+                    <Calendar size={16} className="shrink-0 self-center" />
                     <span className="text-sm font-medium">{exp.period}</span>
                   </div>
-                  <div className="flex items-center text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">
-                    <MapPin size={16} className="mr-2" />
+                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
+                    <MapPin size={16} className="shrink-0 self-center" />
                     <span className="text-sm font-medium">{exp.location}</span>
                   </div>
                 </div>
@@ -593,10 +578,10 @@ function Experience() {
                 ))}
               </ul>
 
-              <div
-                className={`absolute inset-0 bg-gradient-to-r ${exp.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+              <div 
+                className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               ></div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -608,19 +593,10 @@ function Experience() {
 function Projects() {
   const projects = [
     {
-      title: "Personal Portfolio Website",
-      description:
-        "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
-      tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
-      category: "Web Development",
-      gradient: "from-stone-800 to-stone-200",
-      githubUrl: "https://github.com/TRKirua/EnesEkici",
-    },
-    {
       title: "42sh",
       description:
         "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
-      tags: ["C", "POSIX", "Shell", "System Programming"],
+      tags: ["C", "POSIX", "Shell"],
       category: "System Programming",
       gradient: "from-blue-950 to-cyan-300",
       githubUrl: "https://github.com/TRKirua/42sh",
@@ -629,7 +605,7 @@ function Projects() {
       title: "Java IDE",
       description:
         "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
-      tags: ["Java", "IDE", "Git", "Maven", "GUI"],
+      tags: ["Java", "IDE", "Git", "Maven", "GUI", "Sci/Fi Theme"],
       category: "Development Tools",
       gradient: "from-red-950 to-orange-500",
       githubUrl: "https://github.com/TRKirua/java-ide",
@@ -638,10 +614,19 @@ function Projects() {
       title: "AI Solutions for Consulting",
       description:
         "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
-      tags: ["AI", "LLM", "Consulting", "Market Analysis"],
+      tags: ["LLM", "Market Analysis", "Consulting", "AI"],
       category: "AI & Consulting",
       gradient: "from-lime-950 to-emerald-400",
       githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
+    },
+    {
+      title: "Melocas' Ire",
+      description:
+        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
+      tags: ["Unity", "C#", "2D Platformer", "IntelliJ", "Game Development"],
+      category: "Game Development",
+      gradient: "from-violet-950 to-purple-400",
+      githubUrl: "https://github.com/TRKirua/melocas-ire",
     },
     {
       title: "MNIST Character Recognition",
@@ -649,7 +634,7 @@ function Projects() {
         "Built a multi-layer perceptron (MLP) using TensorFlow to classify handwritten digits from the MNIST dataset. Implemented normalization, dropout, and softmax output to optimize multi-class classification accuracy.",
       tags: ["TensorFlow", "Python", "Machine Learning", "MLP"],
       category: "Machine Learning",
-      gradient: "from-yellow-700 to-yellow-300",
+      gradient: "from-yellow-900 to-yellow-300",
       githubUrl: "https://github.com/TRKirua/mnist-character-recognition",
     },
     {
@@ -662,22 +647,22 @@ function Projects() {
       githubUrl: "https://github.com/TRKirua/cnn-dog-cat-classification",
     },
     {
-      title: "Melocas' Ire",
+      title: "Personal Portfolio Website",
       description:
-        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
-      tags: ["Unity", "C#", "Game Development", "2D Platformer"],
-      category: "Game Development",
-      gradient: "from-violet-950 to-purple-400",
-      githubUrl: "https://github.com/TRKirua/melocas-ire",
+        "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
+      tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
+      category: "Web Development",
+      gradient: "from-stone-800 to-stone-200",
+      githubUrl: "https://github.com/TRKirua/EnesEkici",
     },
   ]
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-gray-900/50 to-black relative z-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="projects" className="py-24 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 font-normal font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <FolderOpen className="text-purple-400" size={40} />
+            <FolderOpen className="text-purple-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Featured Projects</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
@@ -686,30 +671,30 @@ function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative bg-clip-text bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <CardContent className="p-8 relative z-10 flex flex-col h-full">
-                <div className="mb-6 flex-grow">
+              <CardContent className="p-8 relative z-10 flex flex-col h-full text-transparent">
+                <div className="mb-6 flex-grow font-normal">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs text-gray-400 uppercase tracking-wider font-bold bg-gray-800/50 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${project.gradient}`}></div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                  <h3 className="font-bold text-white mb-3 transition-all text-2xl">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 text-sm leading-relaxed font-light">{project.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed font-light text-justify text-sm">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-xs rounded-full hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all duration-200 font-medium"
+                        className="px-3 py-1 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-xs rounded-full hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all font-medium"
                       >
                         {tag}
                       </span>
@@ -721,9 +706,9 @@ function Projects() {
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full">
                     <Button
                       size="sm"
-                      className={`bg-gradient-to-r ${project.gradient} hover:shadow-lg text-white w-full font-medium hover:scale-105 transition-transform duration-200`}
+                      className={`bg-gradient-to-r ${project.gradient} hover:shadow-lg text-white w-full gap-2 font-medium hover:scale-105 transition-transform duration-200`}
                     >
-                      <Github size={16} className="mr-2" />
+                      <Github size={16} className="shrink-0 self-center" />
                       Code
                     </Button>
                   </a>
@@ -731,7 +716,7 @@ function Projects() {
               </CardContent>
 
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               ></div>
             </Card>
           ))}
@@ -747,32 +732,32 @@ function Skills() {
     {
       title: "Programming Languages",
       icon: <Code size={24} />,
-      skills: ["Java", "Python", "C", "C#", "C++", "JavaScript", "HTML/CSS"],
-      gradient: "from-blue-500 to-cyan-500",
+      skills: ["Java", "Python", "C", "C#", "C++", "Dart", "JavaScript", "HTML/CSS"],
+      gradient: "from-blue-950 to-cyan-300",
     },
     {
       title: "Frameworks & Libraries",
       icon: <Brain size={24} />,
       skills: ["Pandas", "TensorFlow", "Flutter", "Scikit-Learn"],
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-red-950 to-orange-500",
     },
     {
       title: "Databases",
       icon: <Database size={24} />,
-      skills: ["PostgreSQL", "SQL Server", "MongoDB", "Neo4j"],
-      gradient: "from-emerald-500 to-teal-500",
+      skills: ["Supabase", "Firebase", "Neo4j", "MongoDB", "PostgreSQL", "SQL Server"],
+      gradient: "from-lime-950 to-emerald-400",
     },
     {
       title: "Tools & Technologies",
       icon: <Wrench size={24} />,
-      skills: ["Git", "GitHub", "GitLab", "SVN", "Unity", "VSCode", "JetBrains IDEs"],
-      gradient: "from-orange-500 to-red-500",
+      skills: ["Git", "SVN", "GitHub", "GitLab", "VSCode", "JetBrains IDEs", "Unity"],
+      gradient: "from-violet-950 to-purple-400",
     },
     {
       title: "Other Skills",
       icon: <Palette size={24} />,
-      skills: ["Project Management", "Team Management", "Consulting", "Visual Design", "Digital Drawing"],
-      gradient: "from-violet-500 to-purple-500",
+      skills: ["Consulting", "Visual Design", "Project Management", "Team Management", "Digital Drawing"],
+      gradient: "from-yellow-900 to-yellow-300",
     },
     {
       title: "Languages",
@@ -780,19 +765,19 @@ function Skills() {
       skills: [
         "French (Native)",
         "Turkish (Native)",
-        "English (Fluent - TOEIC 940/990)",
-        "German (Basics - DSD I, KMK)",
+        "English (Fluent) TOEIC 940/990",
+        "German (Basics) DSD I, KMK",
       ],
-      gradient: "from-pink-500 to-rose-500",
+      gradient: "from-fuchsia-950 to-pink-400",
     },
   ]
 
   return (
-    <section id="skills" className="py-24 bg-black relative z-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="skills" className="py-24 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <Code className="text-emerald-400" size={40} />
+            <Code className="text-emerald-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Skills & Technologies</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
@@ -803,26 +788,26 @@ function Skills() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div
+            <Card
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-gray-600/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90"
+              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex items-center space-x-4 mb-8">
                 <div
-                  className={`w-12 h-12 bg-gradient-to-r ${category.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}
+                  className={`w-14 h-12 bg-gradient-to-r ${category.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}
                 >
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                <h3 className="text-xl text-white bg-clip-text">
                   {category.title}
                 </h3>
               </div>
-
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
+          
+              <div className="flex flex-wrap w-full gap-3">
+                {category.skills.map((skill, i) => (
                   <span
-                    key={skillIndex}
-                    className="px-4 py-2 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-sm rounded-xl hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all duration-300 font-medium hover:scale-105"
+                    key={i}
+                    className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-sm rounded-xl font-medium hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all duration-300 text-center"
                   >
                     {skill}
                   </span>
@@ -830,9 +815,9 @@ function Skills() {
               </div>
 
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
               ></div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -878,65 +863,57 @@ function Education() {
   ]
 
   return (
-    <section id="education" className="py-24 bg-gradient-to-b from-gray-900/50 to-black relative z-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="education" className="py-24 relative z-15">
+      <div className="max-w-6xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <GraduationCap className="text-blue-400" size={40} />
+            <GraduationCap className="text-blue-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Education</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">My academic journey and achievements</p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {education.map((edu, index) => (
-            <div
+            <Card
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-gray-600/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90"
+              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div
-                      className={`w-12 h-12 bg-gradient-to-r ${edu.gradient} rounded-2xl flex items-center justify-center shadow-lg`}
-                    >
-                      <GraduationCap size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{edu.degree}</h3>
-                      <span
-                        className={`text-xs px-3 py-1 rounded-full bg-gradient-to-r ${edu.gradient} text-white font-medium`}
-                      >
-                        {edu.status}
-                      </span>
-                    </div>
+                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${edu.gradient}`}></div>
+                    <h3 className="text-2xl font-bold text-white">{edu.degree}</h3>
                   </div>
-                  <a
-                    href={edu.schoolUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 hover:text-white transition-colors duration-300 relative z-30"
-                  >
-                    <h4 className="text-xl text-gray-300 font-semibold hover:text-white transition-colors duration-300">
-                      {edu.school}
-                    </h4>
-                    <ExternalLink size={16} className="text-gray-400 hover:text-white transition-colors duration-300" />
-                  </a>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <School size={18} className="text-gray-400" />
+                    <a
+                      href={edu.schoolUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 hover:text-white transition-colors z-30"
+                    >
+                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">
+                        {edu.school}
+                      </h4>
+                      <ExternalLink size={16} className="shrink-0 self-center text-gray-400 hover:text-white transition-colors"/>
+                    </a>
+                  </div>
                   {edu.gpa && (
-                    <div className="flex items-center text-emerald-400 mb-4 bg-emerald-500/10 px-4 py-2 rounded-full w-fit mt-4">
-                      <Award size={16} className="mr-2" />
+                    <div className="flex items-center gap-2 text-xs text-emerald-400 mb-4 bg-emerald-500/10 px-4 py-2 rounded-full w-fit mt-4">
+                      <Award size={16} className="shrink-0 self-center"/>
                       <span className="font-bold">{edu.gpa}</span>
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col lg:items-end space-y-3 mt-4 lg:mt-0">
-                  <div className="flex items-center text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <Calendar size={16} className="mr-2" />
+                <div className="flex flex-col lg:items-end space-y-2 mt-4 lg:mt-0">
+                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
+                    <Calendar size={16} className="shrink-0 self-center"/>
                     <span className="text-sm font-medium">{edu.period}</span>
                   </div>
-                  <div className="flex items-center text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <MapPin size={16} className="mr-2" />
+                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
+                    <MapPin size={16} className="shrink-0 self-center"/>
                     <span className="text-sm font-medium">{edu.location}</span>
                   </div>
                 </div>
@@ -944,7 +921,7 @@ function Education() {
 
               <ul className="space-y-3">
                 {edu.details.map((detail, detailIndex) => (
-                  <li key={detailIndex} className="text-gray-300 flex items-start font-light leading-relaxed">
+                  <li key={detailIndex} className=" text-sm text-gray-300 flex items-start font-light leading-relaxed">
                     <span
                       className={`w-2 h-2 rounded-full bg-gradient-to-r ${edu.gradient} mr-4 mt-2 flex-shrink-0`}
                     ></span>
@@ -954,9 +931,9 @@ function Education() {
               </ul>
 
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${edu.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                className={`absolute inset-0 bg-gradient-to-br ${edu.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
               ></div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -998,11 +975,11 @@ function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-black relative z-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="contact" className="py-24 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <MessageCircle className="text-cyan-400" size={40} />
+            <MessageCircle className="text-cyan-400 relative top-1" size={50} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Get In Touch</h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
@@ -1023,7 +1000,7 @@ function Contact() {
             </div>
 
             {/* Average Response Time */}
-            <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mb-8">
+            <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mb-8 text-center">
               <Clock size={24} className="text-emerald-400" />
               <span className="text-emerald-400 font-medium text-lg">Average response time: {"< 24h"}</span>
             </div>
@@ -1038,24 +1015,24 @@ function Contact() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Card className="group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-2">
+                  <Card className="group relative bg-clip-text overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-1 hover:-translate-x-1">
                     <CardContent className="p-8">
                       <div className="flex items-center space-x-6">
                         <div
-                          className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                          className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white shadow-lg transition-transform`}
                         >
                           {info.icon}
                         </div>
                         <div className="flex-1">
                           <h4 className="font-bold text-white text-xl mb-2">{info.title}</h4>
-                          <p className="text-gray-400 group-hover:text-white transition-colors duration-300 font-medium text-lg">
+                          <p className="text-gray-400 group-hover:text-white transition-colors text-lg">
                             {info.value}
                           </p>
                         </div>
                       </div>
                     </CardContent>
                     <div
-                      className={`absolute inset-0 bg-gradient-to-r ${info.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-gradient-to-r text-center ${info.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                     ></div>
                   </Card>
                 </a>
@@ -1068,7 +1045,7 @@ function Contact() {
       {/* Simple footer */}
       <footer className="mt-24 pt-12 border-t border-gray-800/50">
         <div className="text-center text-gray-400">
-          <p className="font-light">&copy; 2025 Enes Ekici. All rights reserved.</p>
+          <p className="font-light font-sans">&copy; 2025 Enes Ekici. All rights reserved.</p>
         </div>
       </footer>
     </section>
