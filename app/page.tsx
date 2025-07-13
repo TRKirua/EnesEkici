@@ -25,6 +25,7 @@ import {
   FolderOpen,
   Clock,
   ExternalLink,
+  Download,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -419,7 +420,7 @@ function Hero() {
         </div>
 
         {/* Social Links - Ordered: Mail, Phone, LinkedIn, GitHub */}
-        <div className="flex justify-center space-x-6 animate-fade-in-up animation-delay-50">
+        <div className="relative will-change-transform flex justify-center space-x-6 animate-fade-in-up animation-delay-50">
           <a
             href="mailto:enesekici6868@gmail.com"
             className="group p-4 rounded-xl border border-gray-700 bg-gray-900/30 backdrop-blur-sm transition-all duration-200 transform hover:scale-110 hover:shadow-xl hover:border-purple-400 hover:bg-purple-500/10"
@@ -543,7 +544,7 @@ function Experience() {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                 <div className="flex-1">
@@ -804,7 +805,7 @@ function Skills() {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex items-center space-x-4 mb-8">
                 <div
@@ -892,7 +893,7 @@ function Education() {
           {education.map((edu, index) => (
             <Card
               key={index}
-              className="group relative bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                 <div className="flex-1">
@@ -1018,6 +1019,16 @@ function Contact() {
               <Clock size={24} className="text-emerald-400" />
               <span className="text-emerald-400 font-medium text-lg">Average response time: {"< 24h"}</span>
             </div>
+            <div className="text-center mb-12">
+              <a
+                href="/Enes_Ekici_Resume.pdf"
+                download
+                className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
+              >
+                <Download size={24} />
+                <span className="text-white font-medium text-lg">Download Resume</span>
+              </a>
+            </div>
 
             {/* Contact Links */}
             <div className="grid md:grid-cols-2 gap-6">
@@ -1029,11 +1040,11 @@ function Contact() {
                   rel="noopener noreferrer"
                   className="block"
                 >
-                  <Card className="group relative bg-clip-text overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-1 hover:-translate-x-1">
+                  <Card className="group relative will-change-transform bg-clip-text overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-1 hover:-translate-x-1">
                     <CardContent className="p-8">
                       <div className="flex items-center space-x-6">
                         <div
-                          className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white shadow-lg transition-transform`}
+                          className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white`}
                         >
                           {info.icon}
                         </div>
