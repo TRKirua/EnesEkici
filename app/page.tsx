@@ -1019,11 +1019,13 @@ function Contact() {
               <Clock size={24} className="text-emerald-400" />
               <span className="text-emerald-400 font-medium text-lg">Average response time: {"< 24h"}</span>
             </div>
-            <div className="text-center mb-12">
+
+            <div className="text-center mb-8">
               <a
-                href="https://github.com/TRKirua/EnesEkici/tree/main/public/Enes_Ekici_Resume.pdf"
-                download
-                className="will-change-transform flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
+                href="https://raw.githubusercontent.com/TRKirua/EnesEkici/main/public/Enes_Ekici_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
               >
                 <Download size={24} />
                 <span className="text-white font-medium text-lg">Download Resume</span>
