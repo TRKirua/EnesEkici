@@ -1023,7 +1023,7 @@ function Contact() {
               <a
                 href="/Enes_Ekici_Resume.pdf"
                 download
-                className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
+                className="will-change-transform flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
               >
                 <Download size={24} />
                 <span className="text-white font-medium text-lg">Download Resume</span>
