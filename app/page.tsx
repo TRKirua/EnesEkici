@@ -484,12 +484,26 @@ function Experience() {
       ],
     },
     {
+      title: "Volunteer Developper",
+      company: "Ziyara Project",
+      companyUrl: "https://ziyara-project.com",
+      period: "07.2025 - Present",
+      location: "Paris, France",
+      gradient: "from-red-950 to-orange-500",
+      description: [
+        "Developed two Flutter mobile applications: a public one for users, and an internal one for admins.",
+        "Database management with Supabase (PostgreSQL) and  Firebase (NoSQL).",
+        "Improved code structure with clear separation of widgets, services, and utilities to enhance readability and maintainability.",
+        "Managed user authentication using Supabase for the application.",
+      ],
+    },
+    {
       title: "Dragon Head",
       company: "EPITA",
       companyUrl: "https://www.epita.fr/",
       period: "02.2024 - 06.2024",
       location: "Paris, France",
-      gradient: "from-red-950 to-orange-500",
+      gradient: "from-lime-950 to-emerald-400",
       description: [
         "Led a 10-person student team on collaborative projects with external companies",
         "Organized and ran meetings with partner companies to define project scopes",
@@ -502,7 +516,7 @@ function Experience() {
       companyUrl: "https://mbt-consulting.com",
       period: "09.2023 - 01.2024",
       location: "Mulhouse, France",
-      gradient: "from-lime-950 to-emerald-400",
+      gradient: "from-violet-950 to-purple-400",
       description: [
         "Rebuilt the company website by replacing restrictive widgets with custom HTML modules for improved flexibility and maintainability.",
         "Deployed and configured Systancia Gate (standalone and clustered), Cleanroom, Workplace (cloud and on-prem), and Identity (on-prem).",
@@ -732,25 +746,25 @@ function Skills() {
     {
       title: "Programming Languages",
       icon: <Code size={24} />,
-      skills: ["Java", "Python", "C", "C#", "C++", "Dart", "JavaScript", "HTML/CSS"],
+      skills: ["Java", "Python", "C", "C#", "C++", "Dart", "JavaScript", "SQL", "HTML/CSS"],
       gradient: "from-blue-950 to-cyan-300",
     },
     {
       title: "Frameworks & Libraries",
       icon: <Brain size={24} />,
-      skills: ["Pandas", "TensorFlow", "Flutter", "Scikit-Learn"],
+      skills: ["Pandas", "TensorFlow", "Flutter", "Scikit-Learn", "Tailwind CSS"],
       gradient: "from-red-950 to-orange-500",
     },
     {
       title: "Databases",
       icon: <Database size={24} />,
-      skills: ["Supabase", "Firebase", "Neo4j", "MongoDB", "PostgreSQL", "SQL Server"],
+      skills: ["Supabase", "Firebase", "Neo4j", "MongoDB", "PostgreSQL", "SQL Server", "Notion"],
       gradient: "from-lime-950 to-emerald-400",
     },
     {
       title: "Tools & Technologies",
       icon: <Wrench size={24} />,
-      skills: ["Git", "SVN", "GitHub", "GitLab", "VSCode", "JetBrains IDEs", "Unity"],
+      skills: ["Git", "SVN", "GitHub", "GitLab", "VSCode", "JetBrains IDEs", "Unity", "Notion"],
       gradient: "from-violet-950 to-purple-400",
     },
     {
