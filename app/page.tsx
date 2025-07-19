@@ -262,7 +262,7 @@ function FloatingShapes({ isActive }: { isActive: boolean }) {
   )
 }
 
-// Simplified Loading Screen with static background - NO ANIMATIONS
+// Simplified Loading Screen with static background
 function LoadingScreen() {
   return (
     <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center">
@@ -525,7 +525,7 @@ function Experience() {
 
   return (
     <section id="experience" className="py-24 relative z-20">
-      <div className="max-w-6xl px-4 mx-auto font-sans">
+      <div className="max-w-7xl px-4 mx-auto font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <Briefcase className="text-cyan-400 relative" size={60} />
@@ -671,7 +671,7 @@ function Projects() {
 
   return (
     <section id="projects" className="py-24 relative z-20">
-      <div className="max-w-6xl mx-auto px-4 font-normal font-sans">
+      <div className="max-w-7xl mx-auto px-4 font-normal font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <FolderOpen className="text-purple-400 relative" size={60} />
@@ -744,7 +744,7 @@ function Skills() {
     {
       title: "Programming Languages",
       icon: <Code size={24} />,
-      skills: ["Java", "Python", "C", "C#", "C++", "Dart", "JavaScript", "SQL", "HTML/CSS"],
+      skills: ["Java", "Python", "Dart", "SQL", "C", "C#", "C++", "JavaScript", "HTML/CSS"],
       gradient: "from-blue-950 to-cyan-300",
     },
     {
@@ -756,20 +756,20 @@ function Skills() {
     {
       title: "Databases",
       icon: <Database size={24} />,
-      skills: ["Supabase", "Firebase", "Neo4j", "MongoDB", "PostgreSQL", "SQL Server", "Notion"],
-      gradient: "from-lime-950 to-emerald-400",
+      skills: ["PostgreSQL", "SQL Server", "Neo4j", "Notion", "MongoDB", "Supabase"],
+      gradient: "from-indigo-950 to-purple-300",
     },
     {
       title: "Tools & Technologies",
       icon: <Wrench size={24} />,
-      skills: ["Git", "SVN", "GitHub", "GitLab", "VSCode", "JetBrains IDEs", "Unity", "Notion"],
-      gradient: "from-violet-950 to-purple-400",
+      skills: ["Git", "GitHub", "GitLab", "SVN", "Unity", "Notion", "VSCode", "JetBrains IDEs"],
+      gradient: "from-green-950 to-emerald-300",
     },
     {
       title: "Other Skills",
       icon: <Palette size={24} />,
       skills: ["Consulting", "Visual Design", "Project Management", "Team Management", "Digital Drawing"],
-      gradient: "from-yellow-900 to-yellow-300",
+      gradient: "from-fuchsia-950 to-rose-300",
     },
     {
       title: "Languages",
@@ -780,13 +780,13 @@ function Skills() {
         "English (Fluent) TOEIC 940/990",
         "German (Basics) DSD I, KMK",
       ],
-      gradient: "from-fuchsia-950 to-pink-400",
+      gradient: "from-amber-950 to-yellow-300",
     },
   ]
 
   return (
     <section id="skills" className="py-24 relative z-20">
-      <div className="max-w-6xl mx-auto px-4 font-sans">
+      <div className="max-w-7xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <Code className="text-emerald-400 relative" size={60} />
@@ -815,11 +815,12 @@ function Skills() {
                 </h3>
               </div>
           
-              <div className="flex flex-wrap w-full gap-3">
+              <div className="flex flex-wrap gap-3 w-full justify-center">
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="flex items-center justify-center flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-sm rounded-xl font-medium hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all duration-300 text-center"
+                    className="px-4 py-2 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-sm rounded-xl font-medium text-center hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all duration-300"
+                    style={{ minWidth: "max-content", flexGrow: 1 }}
                   >
                     {skill}
                   </span>
@@ -876,7 +877,7 @@ function Education() {
 
   return (
     <section id="education" className="py-24 relative z-15">
-      <div className="max-w-6xl mx-auto px-4 font-sans">
+      <div className="max-w-7xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <GraduationCap className="text-blue-400 relative" size={60} />
@@ -988,7 +989,7 @@ function Contact() {
 
   return (
     <section id="contact" className="py-24 relative z-20">
-      <div className="max-w-6xl mx-auto px-4 font-sans">
+      <div className="max-w-7xl mx-auto px-4 font-sans">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <MessageCircle className="text-cyan-400 relative top-1" size={50} />
