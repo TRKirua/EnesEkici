@@ -487,7 +487,7 @@ function Experience() {
       companyUrl: "https://ziyara-project.com",
       period: "07.2025 - Present",
       location: "Paris, France",
-      gradient: "from-red-950 to-orange-500",
+      gradient: "from-red-950 to-orange-300",
       description: [
         "Developed two Flutter mobile applications: a public one for users, and an internal one for admins.",
         "Database management with Supabase (PostgreSQL) and  Firebase (NoSQL).",
@@ -501,7 +501,7 @@ function Experience() {
       companyUrl: "https://www.epita.fr/",
       period: "02.2024 - 06.2024",
       location: "Paris, France",
-      gradient: "from-lime-950 to-emerald-400",
+      gradient: "from-indigo-950 to-purple-300",
       description: [
         "Led a 10-person student team on collaborative projects with external companies",
         "Organized and ran meetings with partner companies to define project scopes",
@@ -514,7 +514,7 @@ function Experience() {
       companyUrl: "https://mbt-consulting.com",
       period: "09.2023 - 01.2024",
       location: "Mulhouse, France",
-      gradient: "from-violet-950 to-purple-400",
+      gradient: "from-green-950 to-emerald-300",
       description: [
         "Rebuilt the company website by replacing restrictive widgets with custom HTML modules for improved flexibility and maintainability.",
         "Deployed and configured Systancia Gate (standalone and clustered), Cleanroom, Workplace (cloud and on-prem), and Identity (on-prem).",
@@ -604,79 +604,70 @@ function Experience() {
 // Projects Component with GitHub links
 function Projects() {
   const projects = [
-    {
-      title: "42sh",
-      description:
-        "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
-      tags: ["C", "POSIX", "Shell"],
-      category: "System Programming",
-      gradient: "from-blue-950 to-cyan-300",
-      githubUrl: "https://github.com/TRKirua/42sh",
-    },
-    {
-      title: "Java IDE",
-      description:
-        "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
-      tags: ["Java", "IDE", "Git", "Maven", "GUI", "Sci/Fi Theme"],
-      category: "Development Tools",
-      gradient: "from-red-950 to-orange-500",
-      githubUrl: "https://github.com/TRKirua/java-ide",
-    },
-    {
-      title: "AI Solutions for Consulting",
-      description:
-        "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
-      tags: ["LLM", "Market Analysis", "Consulting", "AI"],
-      category: "AI & Consulting",
-      gradient: "from-lime-950 to-emerald-400",
-      githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
-    },
-    {
-      title: "ToDo App",
-      description:
-        "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
-      tags: ["C", "POSIX", "Shell"],
-      category: "System Programming",
-      gradient: "from-blue-950 to-cyan-300",
-      githubUrl: "https://github.com/TRKirua/42sh",
-    },
-    {
-      title: "Melocas' Ire",
-      description:
-        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
-      tags: ["Unity", "C#", "2D Platformer", "IntelliJ", "Game Development"],
-      category: "Game Development",
-      gradient: "from-violet-950 to-purple-400",
-      githubUrl: "https://github.com/TRKirua/melocas-ire",
-    },
-    {
-      title: "MNIST Character Recognition",
-      description:
-        "Built a multi-layer perceptron (MLP) using TensorFlow to classify handwritten digits from the MNIST dataset. Implemented normalization, dropout, and softmax output to optimize multi-class classification accuracy.",
-      tags: ["TensorFlow", "Python", "Machine Learning", "MLP"],
-      category: "Machine Learning",
-      gradient: "from-yellow-900 to-yellow-300",
-      githubUrl: "https://github.com/TRKirua/mnist-character-recognition",
-    },
-    {
-      title: "CNN Dog Cat Classification",
-      description:
-        "Developed a convolutional neural network (CNN) using TensorFlow to classify images of dogs and cats. Implemented data augmentation, batch normalization, and transfer learning techniques to achieve high accuracy in binary image classification.",
-      tags: ["TensorFlow", "Python", "Machine Learning", "CNN"],
-      category: "Machine Learning",
-      gradient: "from-fuchsia-950 to-pink-400",
-      githubUrl: "https://github.com/TRKirua/cnn-dog-cat-classification",
-    },
-    {
-      title: "Personal Portfolio Website",
-      description:
-        "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
-      tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
-      category: "Web Development",
-      gradient: "from-stone-800 to-stone-200",
-      githubUrl: "https://github.com/TRKirua/EnesEkici",
-    },
-  ]
+  {
+    title: "42sh",
+    description:
+      "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
+    tags: ["C", "POSIX", "Shell"],
+    category: "System Programming",
+    gradient: "from-blue-950 to-cyan-300",
+    githubUrl: "https://github.com/TRKirua/42sh",
+  },
+  {
+    title: "Java IDE",
+    description:
+      "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
+    tags: ["Java", "IDE", "Git", "Maven", "GUI"],
+    category: "Development Tools",
+    gradient: "from-red-950 to-orange-300",
+    githubUrl: "https://github.com/TRKirua/ICBZ-IDE",
+  },
+  {
+    title: "AI Solutions for Consulting",
+    description:
+      "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
+    tags: ["LLM", "Market Analysis", "Consulting", "AI"],
+    category: "AI & Consulting",
+    gradient: "from-indigo-950 to-purple-300",
+    githubUrl: "https://github.com/TRKirua/AI-Consulting-Solutions",
+  },
+  {
+    title: "ToDo App",
+    description:
+      "Built a full-stack, collaborative ToDo list application with real-time updates using Supabase (PostgreSQL + Auth + Realtime). Implemented email & Google OAuth authentication, CRUD on tasks, role-based read/write permissions, and a modern Tailwind CSS interface.",
+    tags: ["JavaScript", "Supabase", "Realtime", "Authentication", "Tailwind CSS"],
+    category: "Fullstack Web",
+    gradient: "from-green-950 to-emerald-300",
+    githubUrl: "https://github.com/TRKirua/ToDoApp",
+  },
+  {
+    title: "Melocas' Ire",
+    description:
+      "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
+    tags: ["Unity", "C#", "2D Platformer", "IntelliJ", "Game Development"],
+    category: "Game Development",
+    gradient: "from-fuchsia-950 to-rose-300",
+    githubUrl: "https://github.com/TRKirua/Melocas-Ire",
+  },
+  {
+    title: "Neural Networks",
+    description:
+      "Developed two TensorFlow-based deep learning models—a Multilayer Perceptron (MLP) and a Convolutional Neural Network (CNN).",
+    tags: ["TensorFlow", "Python", "Deep Learning", "MLP", "CNN"],
+    category: "Deep Learning",
+    gradient: "from-amber-950 to-yellow-300",
+    githubUrl: "https://github.com/TRKirua/Neural-Networks",
+  },
+  {
+    title: "Personal Portfolio Website",
+    description:
+      "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
+    tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
+    category: "Web Development",
+    gradient: "from-slate-950 to-gray-300",
+    githubUrl: "https://github.com/TRKirua/EnesEkici",
+  },
+]
 
   return (
     <section id="projects" className="py-24 relative z-20">
