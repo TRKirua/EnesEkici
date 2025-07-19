@@ -308,7 +308,6 @@ function LoadingScreen() {
           </h1>
         </div>
 
-        {/* Progress Bar - PAS D'ANIMATION */}
         <div className="w-64 h-1 bg-gray-800 rounded-full mx-auto overflow-hidden">
           <div className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full animate-loading-bar"></div>
         </div>
@@ -397,19 +396,18 @@ function Navigation() {
   )
 }
 
-// New Simple Hero Component
+// Simple Hero Component
 function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative px-4 font-mono">
       <div className="text-center space-y-8 relative z-20">
-        {/* Available for Work Badge */}
+        
         <div className="flex items-center justify-center space-x-3 animate-fade-in-up">
           <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse-slow"></div>
           <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider font-mono">Available for Work</span>
           <div className="flex-1 h-px bg-gradient-to-r from-emerald-400 to-transparent"></div>
         </div>
 
-        {/* Name - Same line, smaller */}
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none tracking-tight animate-fade-in-up animation-delay-50">
             <span className="text-white drop-shadow-2xl mr-4">ENES</span>
@@ -419,7 +417,6 @@ function Hero() {
           </h1>
         </div>
 
-        {/* Social Links - Ordered: Mail, Phone, LinkedIn, GitHub */}
         <div className="relative will-change-transform flex justify-center space-x-6 animate-fade-in-up animation-delay-50">
           <a
             href="mailto:enesekici6868@gmail.com"
@@ -451,7 +448,7 @@ function Hero() {
           </a>
         </div>
 
-        {/* Scroll Indicator - Centered below social links */}
+        {/* Scroll Indicator */}
         <div className="text-center animate-fade-in-up relative top-20 pt-8">
           <div className="animate-bounce">
             <div className="text-gray-400 text-sm uppercase tracking-wider mb-4 font-medium">Scroll to Explore</div>
@@ -633,6 +630,15 @@ function Projects() {
       category: "AI & Consulting",
       gradient: "from-lime-950 to-emerald-400",
       githubUrl: "https://github.com/TRKirua/ai-consulting-solutions",
+    },
+    {
+      title: "ToDo App",
+      description:
+        "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
+      tags: ["C", "POSIX", "Shell"],
+      category: "System Programming",
+      gradient: "from-blue-950 to-cyan-300",
+      githubUrl: "https://github.com/TRKirua/42sh",
     },
     {
       title: "Melocas' Ire",
@@ -956,7 +962,7 @@ function Education() {
   )
 }
 
-// Contact Component without form, with average response time and social links
+// Contact Component with average response time and social links
 function Contact() {
   const contactInfo = [
     {
