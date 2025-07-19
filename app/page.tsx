@@ -652,7 +652,7 @@ function Projects() {
   {
     title: "Neural Networks",
     description:
-      "Developed two TensorFlow-based deep learning models—a Multilayer Perceptron (MLP) and a Convolutional Neural Network (CNN).",
+      "Developed two TensorFlow-based deep learning models : a Multilayer Perceptron (MLP) and a Convolutional Neural Network (CNN).",
     tags: ["TensorFlow", "Python", "Deep Learning", "MLP", "CNN"],
     category: "Deep Learning",
     gradient: "from-amber-950 to-yellow-300",
