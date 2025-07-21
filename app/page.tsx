@@ -687,26 +687,26 @@ function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group relative bg-clip-text bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="will-change-transform group relative bg-clip-text bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <CardContent className="p-8 relative z-10 flex flex-col h-full text-transparent">
                 <div className="mb-6 flex-grow font-normal">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-gray-400 uppercase tracking-wider font-bold bg-gray-800/50 px-3 py-1 rounded-full">
+                  <div className="will-change-transform flex items-center justify-between mb-3">
+                    <span className="will-change-transform text-xs text-gray-400 uppercase tracking-wider font-bold bg-gray-800/50 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${project.gradient}`}></div>
                   </div>
-                  <h3 className="font-bold text-white mb-3 transition-all text-2xl">
+                  <h3 className="will-change-transform font-bold text-white mb-3 transition-all text-2xl">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed font-light text-justify text-sm">{project.description}</p>
+                  <p className="will-change-transform text-gray-300 mb-6 leading-relaxed font-light text-justify text-sm">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="will-change-transform flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-xs rounded-full hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all font-medium"
+                        className="will-change-transform px-3 py-1 bg-gray-800/50 border border-gray-700/50 text-gray-300 text-xs rounded-full hover:border-white/20 hover:bg-gray-700/50 hover:text-white transition-all font-medium"
                       >
                         {tag}
                       </span>
@@ -714,13 +714,13 @@ function Projects() {
                   </div>
                 </div>
 
-                <div className="flex justify-center mt-auto">
+                <div className="flex will-change-transform justify-center mt-auto">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full">
                     <Button
                       size="sm"
                       className={`bg-gradient-to-r ${project.gradient} hover:shadow-lg text-white w-full gap-2 font-medium hover:scale-105 transition-transform duration-200`}
                     >
-                      <Github size={16} className="shrink-0 self-center" />
+                      <Github size={16} className="will-change-transform shrink-0 self-center" />
                       Code
                     </Button>
                   </a>
@@ -804,7 +804,7 @@ function Skills() {
               key={index}
               className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <div className="flex items-center space-x-4 mb-8">
+              <div className="flex will-change-transform items-center space-x-4 mb-8">
                 <div
                   className={`w-14 h-12 bg-gradient-to-r ${category.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}
                 >
@@ -815,7 +815,7 @@ function Skills() {
                 </h3>
               </div>
           
-              <div className="flex flex-wrap gap-3 w-full justify-center">
+              <div className="flex flex-wrap will-change-transform gap-3 w-full justify-center">
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
