@@ -632,6 +632,15 @@ function Projects() {
     githubUrl: "https://github.com/TRKirua/AI-Consulting-Solutions",
   },
   {
+    title: "ToDo App",
+    description:
+      "Built a full-stack, collaborative ToDo list application with real-time updates using Supabase (PostgreSQL + Auth + Realtime). Implemented email & Google OAuth authentication, CRUD on tasks, role-based read/write permissions, and a modern Tailwind CSS interface.",
+    tags: ["TypeScript", "JavaScript", "Supabase", "Realtime", "Authentication", "Tailwind CSS"],
+    category: "Fullstack Web",
+    gradient: "from-green-950 to-emerald-300",
+    githubUrl: "https://github.com/TRKirua/ToDoApp",
+  },
+  {
     title: "Melocas' Ire",
     description:
       "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
@@ -653,7 +662,7 @@ function Projects() {
     title: "Personal Portfolio Website",
     description:
       "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
-    tags: ["Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
+    tags: ["TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
     category: "Web Development",
     gradient: "from-slate-950 to-gray-300",
     githubUrl: "https://github.com/TRKirua/EnesEkici",
