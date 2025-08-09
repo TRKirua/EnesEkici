@@ -298,7 +298,6 @@ function LoadingScreen() {
       </div>
 
       <div className="text-center space-y-12 relative z-10">
-        {/* Name - PAS D'ANIMATION */}
         <div className="space-y-4">
           <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight">
             <span className="block text-white">ENES</span>
@@ -638,7 +637,7 @@ function Projects() {
     tags: ["TypeScript", "JavaScript", "Supabase", "Realtime", "Authentication", "Tailwind CSS"],
     category: "Fullstack Web",
     gradient: "from-green-950 to-emerald-300",
-    githubUrl: "https://github.com/TRKirua/ToDoApp",
+    githubUrl: "https://github.com/TRKirua/Collaborative-ToDo-App",
   },
   {
     title: "Melocas' Ire",
