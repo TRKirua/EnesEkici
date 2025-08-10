@@ -634,7 +634,7 @@ function Projects() {
     title: "ToDo App",
     description:
       "Built a full-stack, collaborative ToDo list application with real-time updates using Supabase (PostgreSQL + Auth + Realtime). Implemented email & Google OAuth authentication, CRUD on tasks, role-based read/write permissions, and a modern Tailwind CSS interface.",
-    tags: ["TypeScript", "JavaScript", "Supabase", "Realtime", "Authentication", "Tailwind CSS"],
+    tags: ["TypeScript", "JavaScript", "Supabase", "Authentication", "Tailwind CSS"],
     category: "Fullstack Web",
     gradient: "from-green-950 to-emerald-300",
     githubUrl: "https://github.com/TRKirua/Collaborative-ToDo-App",
