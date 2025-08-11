@@ -2,7 +2,7 @@
 
 Welcome to the source code of my personal portfolio website, built to showcase my projects, skills, and experience.
 
-🌐 **Live Demo**: [trkirua.github.io/EnesEkici](https://trkirua.github.io/EnesEkici/)
+🌐 **Link**: [trkirua.github.io/EnesEkici](https://trkirua.github.io/EnesEkici/)
 
 ---
 
