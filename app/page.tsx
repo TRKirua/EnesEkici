@@ -540,11 +540,11 @@ function Experience() {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="group relative will-change-transform bg-clip-text overflow-hidden p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-2">
+                  <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${exp.gradient}`}></div>
                     <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
                   </div>
@@ -681,7 +681,7 @@ function Projects() {
               key={index}
               className="will-change-transform group relative bg-clip-text bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <CardContent className="p-6 relative z-10 flex flex-col h-full text-transparent">
+              <CardContent className="p-8 relative z-10 flex flex-col h-full text-transparent">
                 <div className="mb-6 flex-grow font-normal">
                   <h3 className="will-change-transform font-bold text-white mb-3 transition-all text-2xl">
                     {project.title}
@@ -802,7 +802,7 @@ function Skills() {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="group relative will-change-transform bg-clip-text overflow-hidden p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
               <div className="flex will-change-transform items-center space-x-4 mb-6">
                 <div
@@ -993,7 +993,7 @@ function Contact() {
             </div>
 
             {/* Average Response Time */}
-            <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-6 mb-8 text-center">
+            <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-xl p-8 mb-8 text-center">
               <Clock size={24} className="text-emerald-400" />
               <span className="text-emerald-400 font-medium text-lg">Average response time: {"< 24h"}</span>
             </div>
@@ -1003,7 +1003,7 @@ function Contact() {
                 href="https://raw.githubusercontent.com/TRKirua/EnesEkici/main/public/Enes_Ekici_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-6 mb-8 text-center hover:scale-105 transition-transform duration-300"
+                className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-400/30 via-blue-500/15 to-purple-600/30 border border-white-500/20 rounded-xl p-8 mb-8 text-center hover:scale-105 transition-transform duration-300"
               >
                 <Download size={24} />
                 <span className="text-white font-medium text-lg">Download Resume</span>
@@ -1023,7 +1023,7 @@ function Contact() {
                   <Card className="group relative will-change-transform bg-clip-text overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-1 hover:-translate-x-1">
                     <CardContent className="px-6 py-5 md:px-8 md:py-6">
                       <div className="flex items-center space-x-6">
-                        <div className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white`}>
+                        <div className={`p-8 bg-gradient-to-r ${info.gradient} rounded-2xl text-white`}>
                           {info.icon}
                         </div>
                         <div className="flex-1">
