@@ -7,10 +7,8 @@ import {
   Mail,
   Phone,
   GraduationCap,
-  MapPin,
   Menu,
   X,
-  Calendar,
   Building,
   School,
   Github,
@@ -19,13 +17,13 @@ import {
   Wrench,
   Palette,
   Brain,
-  Award,
   MessageCircle,
   Briefcase,
   FolderOpen,
   Clock,
   ExternalLink,
   Download,
+  Lock,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -350,7 +348,9 @@ function Navigation() {
         <div className="flex w-full items-center justify-between rounded-md my-1.5 py-1.5 px-5 gap-x-0 flex-row font-normal leading-7 tracking-normal">
           <div className="text-2xl font-bold">
             <span className="text-white">Enes</span>
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Ekici</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Ekici
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -400,10 +400,11 @@ function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative px-4 font-mono">
       <div className="text-center space-y-8 relative z-20">
-        
         <div className="flex items-center justify-center space-x-3 animate-fade-in-up">
           <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse-slow"></div>
-          <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider font-mono">Available for Work</span>
+          <span className="text-emerald-400 text-sm font-medium uppercase tracking-wider font-mono">
+            Available for Work
+          </span>
           <div className="flex-1 h-px bg-gradient-to-r from-emerald-400 to-transparent"></div>
         </div>
 
@@ -451,8 +452,8 @@ function Hero() {
         <div className="text-center animate-fade-in-up relative top-20 pt-8">
           <div className="animate-bounce">
             <div className="text-gray-400 text-sm uppercase tracking-wider mb-4 font-medium">Scroll to Explore</div>
-              <div className="animate-bounce">
-                <div className="w-8 h-8 border-2 border-gray-700 rounded-full flex items-center justify-center mx-auto">
+            <div className="animate-bounce">
+              <div className="w-8 h-8 border-2 border-gray-700 rounded-full flex items-center justify-center mx-auto">
                 <ArrowDown size={16} className="text-gray-400" />
               </div>
             </div>
@@ -467,57 +468,56 @@ function Hero() {
 function Experience() {
   const experiences = [
     {
-      title: "Product Usage Data Insights - Intern",
+      title: "Software Engineer / Data Analyst — Intern",
       company: "Swiss Aviation Software",
       companyUrl: "https://www.swiss-as.com/",
-      period: "02.2025 - 08.2025",
+      period: "Feb 2025 - Aug 2025",
       location: "Basel, Switzerland",
       gradient: "from-blue-950 to-cyan-300",
       description: [
-        "Identified key behavioural analyses to support data-driven decisions by Product Owners and Managers.",
-        "Designed and implemented custom trackers in the Flutter codebase to capture real-time user behaviour in the company's mobile application.",
-        "Structured tracking data for integration with internal monitoring tools, enabling workflow and user journey analysis.",
-        "Aligned tracking strategy with stakeholder needs through regular meetings and tailored data visualizations.",
+        "Identified key behavioural analyses to support data-driven decisions by POs and PMs.",
+        "Designed and built custom Flutter trackers to capture real-time user behavior.",
+        "Structured tracking data for seamless integration with internal monitoring tools.",
+        "Aligned tracking strategy with stakeholder needs via regular syncs and tailored visualizations.",
       ],
     },
     {
-      title: "Volunteer Developper",
+      title: "Volunteer Software Engineer",
       company: "Ziyara Project",
       companyUrl: "https://ziyara-project.com",
-      period: "07.2025 - Present",
+      period: "Jul 2024 - Present",
       location: "Paris, France",
       gradient: "from-red-950 to-orange-300",
       description: [
-        "Developed two Flutter mobile applications: a public one for users, and an internal one for admins.",
-        "Database management with Supabase (PostgreSQL) and  Firebase (NoSQL).",
-        "Improved code structure with clear separation of widgets, services, and utilities to enhance readability and maintainability.",
-        "Managed user authentication using Supabase for the application.",
+        "Developing and maintaining two Flutter apps: a user-facing app and an internal admin app.",
+        "Managing database operations with Supabase (PostgreSQL).",
+        "Delivered new features, bug fixes, and improved code structure for maintainability.",
       ],
     },
     {
       title: "Dragon Head",
       company: "EPITA",
       companyUrl: "https://www.epita.fr/",
-      period: "02.2024 - 06.2024",
+      period: "Feb 2024 - Jun 2024",
       location: "Paris, France",
       gradient: "from-indigo-950 to-purple-300",
       description: [
-        "Led a 10-person student team on collaborative projects with external companies",
-        "Organized and ran meetings with partner companies to define project scopes",
-        "Assigned roles to each team member according to their strengths",
+        "Spearheaded a project team on collaborative projects with external companies.",
+        "Coordinated meetings with partners to define project scope and requirements.",
+        "Allocated responsibilities based on individual strengths to maximize efficiency.",
       ],
     },
     {
-      title: "Virtualisation and PAM Engineer - Intern",
+      title: "Virtualisation & PAM Engineer — Intern",
       company: "MBT Consulting",
       companyUrl: "https://mbt-consulting.com",
-      period: "09.2023 - 01.2024",
+      period: "Sep 2023 - Jan 2024",
       location: "Mulhouse, France",
       gradient: "from-green-950 to-emerald-300",
       description: [
-        "Rebuilt the company website by replacing restrictive widgets with custom HTML modules for improved flexibility and maintainability.",
-        "Deployed and configured Systancia Gate (standalone and clustered), Cleanroom, Workplace (cloud and on-prem), and Identity (on-prem).",
-        "Set up and documented FSLogix profile containers and ODFC containers for streamlined Office 365 integration.",
+        "Rebuilt the company website using custom HTML modules for greater flexibility.",
+        "Deployed and configured Systancia Gate, Cleanroom, Workplace, and Identity.",
+        "Set up and documented FSLogix and ODFC containers to streamline Office 365 integration.",
       ],
     },
   ]
@@ -530,25 +530,25 @@ function Experience() {
             <Briefcase className="text-cyan-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Professional Experience</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             My journey through various roles and responsibilities
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-4">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                 <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-3">
+                  <div className="flex items-center space-x-3 mb-2">
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${exp.gradient}`}></div>
                     <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
                   </div>
-                  <div className="flex items-center space-x-2 mb-2">
+                  <div className="flex items-center space-x-2">
                     <Building size={18} className="text-gray-400" />
                     <a
                       href={exp.companyUrl}
@@ -556,29 +556,22 @@ function Experience() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 hover:text-white transition-colors z-30"
                     >
-                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">
-                        {exp.company}
-                      </h4>
+                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">{exp.company}</h4>
                       <ExternalLink
                         size={16}
                         className="shrink-0 self-center text-gray-400 hover:text-white transition-colors"
                       />
                     </a>
+                    <span className="text-gray-400">-</span>
+                    <span className="text-lg text-gray-400 italic">{exp.location}</span>
                   </div>
                 </div>
-                <div className="flex flex-col lg:items-end space-y-2 mt-4 lg:mt-0">
-                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <Calendar size={16} className="shrink-0 self-center" />
-                    <span className="text-sm font-medium">{exp.period}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <MapPin size={16} className="shrink-0 self-center" />
-                    <span className="text-sm font-medium">{exp.location}</span>
-                  </div>
+                <div className="flex flex-col lg:items-end mt-4 lg:mt-0">
+                  <span className="text-sm font-medium text-gray-400">{exp.period}</span>
                 </div>
               </div>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {exp.description.map((item, itemIndex) => (
                   <li key={itemIndex} className="text-gray-300 flex items-start font-light leading-relaxed">
                     <span
@@ -589,7 +582,7 @@ function Experience() {
                 ))}
               </ul>
 
-              <div 
+              <div
                 className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               ></div>
             </Card>
@@ -603,70 +596,70 @@ function Experience() {
 // Projects Component with GitHub links
 function Projects() {
   const projects = [
-  {
-    title: "42sh",
-    description:
-      "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
-    tags: ["C", "POSIX", "Shell"],
-    category: "System Programming",
-    gradient: "from-blue-950 to-cyan-300",
-    githubUrl: "https://github.com/TRKirua/42sh",
-  },
-  {
-    title: "Java IDE",
-    description:
-      "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
-    tags: ["Java", "IDE", "Git", "Maven", "GUI"],
-    category: "Development Tools",
-    gradient: "from-red-950 to-orange-300",
-    githubUrl: "https://github.com/TRKirua/ICBZ-IDE",
-  },
-  {
-    title: "AI Solutions for Consulting",
-    description:
-      "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
-    tags: ["LLM", "Market Analysis", "Consulting", "AI"],
-    category: "AI & Consulting",
-    gradient: "from-indigo-950 to-purple-300",
-    githubUrl: "https://github.com/TRKirua/AI-Consulting-Solutions",
-  },
-  {
-    title: "ToDo App",
-    description:
-      "Built a full-stack, collaborative ToDo list application with real-time updates using Supabase (PostgreSQL + Auth + Realtime). Implemented email & Google OAuth authentication, CRUD on tasks, role-based read/write permissions, and a modern Tailwind CSS interface.",
-    tags: ["TypeScript", "JavaScript", "Supabase", "Authentication", "Tailwind CSS"],
-    category: "Fullstack Web",
-    gradient: "from-green-950 to-emerald-300",
-    githubUrl: "https://github.com/TRKirua/Collaborative-ToDo-App",
-  },
-  {
-    title: "Melocas' Ire",
-    description:
-      "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
-    tags: ["Unity", "C#", "2D Platformer", "IntelliJ", "Game Development"],
-    category: "Game Development",
-    gradient: "from-fuchsia-950 to-rose-300",
-    githubUrl: "https://github.com/TRKirua/Melocas-Ire",
-  },
-  {
-    title: "Neural Networks",
-    description:
-      "Developed two TensorFlow-based deep learning models : a Multilayer Perceptron (MLP) and a Convolutional Neural Network (CNN).",
-    tags: ["TensorFlow", "Python", "Deep Learning", "MLP", "CNN"],
-    category: "Deep Learning",
-    gradient: "from-amber-950 to-yellow-300",
-    githubUrl: "https://github.com/TRKirua/Neural-Networks",
-  },
-  {
-    title: "Personal Portfolio Website",
-    description:
-      "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
-    tags: ["TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
-    category: "Web Development",
-    gradient: "from-slate-950 to-gray-300",
-    githubUrl: "https://github.com/TRKirua/EnesEkici",
-  },
-]
+    {
+      title: "42sh",
+      description:
+        "Implemented a POSIX standards compliant shell in C language with basic features including command parsing, execution, and process management.",
+      tags: ["C", "POSIX", "Shell"],
+      gradient: "from-blue-950 to-cyan-300",
+      githubUrl: "https://github.com/TRKirua/42sh",
+      isPrivate: false,
+    },
+    {
+      title: "Java IDE",
+      description:
+        "Developed a full-featured Java IDE from the ground up, including code editor, compilation console, file management, autocomplete, and Git integration.",
+      tags: ["Java", "IDE", "Git", "Maven", "GUI"],
+      gradient: "from-red-950 to-orange-300",
+      githubUrl: "https://github.com/TRKirua/ICBZ-IDE",
+      isPrivate: false,
+    },
+    {
+      title: "AI Solutions for Consulting",
+      description:
+        "Analyzed consulting markets in France, Switzerland and the EU, drove AI-powered RFP/RFI automation assessments and custom LLM feasibility.",
+      tags: ["LLM", "Market Analysis", "Consulting", "AI"],
+      gradient: "from-indigo-950 to-purple-300",
+      githubUrl: "",
+      isPrivate: true,
+    },
+    {
+      title: "ToDo App",
+      description:
+        "Built a full-stack, collaborative ToDo list application with real-time updates using Supabase (PostgreSQL + Auth + Realtime). Implemented email & Google OAuth authentication, CRUD on tasks, role-based read/write permissions, and a modern Tailwind CSS interface.",
+      tags: ["TypeScript", "JavaScript", "Supabase", "Authentication", "Tailwind CSS"],
+      gradient: "from-green-950 to-emerald-300",
+      githubUrl: "https://github.com/TRKirua/Collaborative-ToDo-App",
+      isPrivate: false,
+    },
+    {
+      title: "Melocas' Ire",
+      description:
+        "Development of a 2D platformer game with 5 levels using Unity. Responsibilities included level design, assets creation, and player mechanics.",
+      tags: ["Unity", "C#", "2D Platformer", "IntelliJ", "Game Development"],
+      gradient: "from-fuchsia-950 to-rose-300",
+      githubUrl: "https://github.com/TRKirua/Melocas-Ire",
+      isPrivate: false,
+    },
+    {
+      title: "Neural Networks",
+      description:
+        "Developed two TensorFlow-based deep learning models : a Multilayer Perceptron (MLP) and a Convolutional Neural Network (CNN).",
+      tags: ["TensorFlow", "Python", "Deep Learning", "MLP", "CNN"],
+      gradient: "from-amber-950 to-yellow-300",
+      githubUrl: "https://github.com/TRKirua/Neural-Networks",
+      isPrivate: false,
+    },
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "Designed and developed a responsive personal website using Tailwind CSS. Configured GitHub Actions for automated build and continuous deployment to GitHub Pages.",
+      tags: ["TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS", "Git", "GitHub", "CI/CD", "YAML"],
+      gradient: "from-slate-950 to-gray-300",
+      githubUrl: "https://github.com/TRKirua/EnesEkici",
+      isPrivate: false,
+    },
+  ]
 
   return (
     <section id="projects" className="py-24 relative z-20">
@@ -674,9 +667,9 @@ function Projects() {
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <FolderOpen className="text-purple-400 relative" size={60} />
-            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Featured Projects</h2>
+            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Projects</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             A showcase of my technical projects and achievements
           </p>
@@ -688,18 +681,14 @@ function Projects() {
               key={index}
               className="will-change-transform group relative bg-clip-text bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <CardContent className="p-8 relative z-10 flex flex-col h-full text-transparent">
+              <CardContent className="p-6 relative z-10 flex flex-col h-full text-transparent">
                 <div className="mb-6 flex-grow font-normal">
-                  <div className="will-change-transform flex items-center justify-between mb-3">
-                    <span className="will-change-transform text-xs text-gray-400 uppercase tracking-wider font-bold bg-gray-800/50 px-3 py-1 rounded-full">
-                      {project.category}
-                    </span>
-                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${project.gradient}`}></div>
-                  </div>
                   <h3 className="will-change-transform font-bold text-white mb-3 transition-all text-2xl">
                     {project.title}
                   </h3>
-                  <p className="will-change-transform text-gray-300 mb-6 leading-relaxed font-light text-justify text-sm">{project.description}</p>
+                  <p className="will-change-transform text-gray-300 mb-6 leading-relaxed font-light text-justify text-sm">
+                    {project.description}
+                  </p>
 
                   <div className="will-change-transform flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
@@ -714,15 +703,26 @@ function Projects() {
                 </div>
 
                 <div className="flex will-change-transform justify-center mt-auto">
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+                  {project.isPrivate ? (
                     <Button
                       size="sm"
-                      className={`bg-gradient-to-r ${project.gradient} hover:shadow-lg text-white w-full gap-2 font-medium hover:scale-105 transition-transform duration-200`}
+                      disabled
+                      className={`bg-gradient-to-r ${project.gradient} opacity-50 cursor-not-allowed text-white w-full gap-2 font-medium`}
                     >
-                      <Github size={16} className="will-change-transform shrink-0 self-center" />
-                      Code
+                      <Lock size={16} className="will-change-transform shrink-0 self-center" />
+                      Private
                     </Button>
-                  </a>
+                  ) : (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+                      <Button
+                        size="sm"
+                        className={`bg-gradient-to-r ${project.gradient} hover:shadow-lg text-white w-full gap-2 font-medium hover:scale-105 transition-transform duration-200`}
+                      >
+                        <Github size={16} className="will-change-transform shrink-0 self-center" />
+                        See on GitHub
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </CardContent>
 
@@ -743,43 +743,44 @@ function Skills() {
     {
       title: "Programming Languages",
       icon: <Code size={24} />,
-      skills: ["Java", "Python", "Dart", "SQL", "C", "C#", "C++", "JavaScript", "HTML/CSS"],
+      skills: ["Python", "C", "C++", "C#", "Go", "Java", "JavaScript", "TypeScript", "Dart", "Bash"],
       gradient: "from-blue-950 to-cyan-300",
     },
     {
       title: "Frameworks & Libraries",
       icon: <Brain size={24} />,
-      skills: ["Pandas", "TensorFlow", "Flutter", "Scikit-Learn", "Tailwind CSS"],
+      skills: ["Pandas", "TensorFlow", "Flutter", "React", "Scikit-Learn"],
       gradient: "from-red-950 to-orange-500",
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: <Database size={24} />,
+      skills: ["AWS", "Docker", "Terraform", "Ansible", "Kubernetes", "GitHub Actions"],
+      gradient: "from-indigo-950 to-purple-300",
     },
     {
       title: "Databases",
       icon: <Database size={24} />,
-      skills: ["PostgreSQL", "SQL Server", "Neo4j", "Notion", "MongoDB", "Supabase"],
-      gradient: "from-indigo-950 to-purple-300",
-    },
-    {
-      title: "Tools & Technologies",
-      icon: <Wrench size={24} />,
-      skills: ["Git", "GitHub", "GitLab", "SVN", "Unity", "Notion", "VSCode", "JetBrains IDEs"],
+      skills: ["PostgreSQL", "MongoDB", "Neo4j", "Supabase"],
       gradient: "from-green-950 to-emerald-300",
     },
     {
-      title: "Other Skills",
+      title: "Methods",
       icon: <Palette size={24} />,
-      skills: ["Consulting", "Visual Design", "Project Management", "Team Management", "Digital Drawing"],
+      skills: ["Project Management", "Team Management", "Consulting", "AGILE/SCRUM"],
       gradient: "from-fuchsia-950 to-rose-300",
     },
     {
       title: "Languages",
       icon: <MessageCircle size={24} />,
-      skills: [
-        "French (Native)",
-        "Turkish (Native)",
-        "English (Fluent) TOEIC 940/990",
-        "German (Basics) DSD I, KMK",
-      ],
+      skills: ["French & Turkish (Native)", "English (Fluent, TOEIC - C1)", "German (Intermediate, DSD I - B1)"],
       gradient: "from-amber-950 to-yellow-300",
+    },
+    {
+      title: "Tools & Technologies",
+      icon: <Wrench size={24} />,
+      skills: ["Git", "GitHub", "GitLab", "SVN", "Unity", "Notion", "VSCode", "JetBrains IDEs"],
+      gradient: "from-rose-950 to-rose-300",
     },
   ]
 
@@ -789,9 +790,9 @@ function Skills() {
         <div className="text-center mb-20">
           <div className="flex items-center justify-center space-x-4 mb-6">
             <Code className="text-emerald-400 relative" size={60} />
-            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Skills & Technologies</h2>
+            <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Technical Skills</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Technologies, tools, and languages I work with to bring ideas to life
           </p>
@@ -801,19 +802,17 @@ function Skills() {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
             >
-              <div className="flex will-change-transform items-center space-x-4 mb-8">
+              <div className="flex will-change-transform items-center space-x-4 mb-6">
                 <div
                   className={`w-14 h-12 bg-gradient-to-r ${category.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}
                 >
                   {category.icon}
                 </div>
-                <h3 className="text-xl text-white bg-clip-text">
-                  {category.title}
-                </h3>
+                <h3 className="text-xl text-white bg-clip-text">{category.title}</h3>
               </div>
-          
+
               <div className="flex flex-wrap will-change-transform gap-3 w-full justify-center">
                 {category.skills.map((skill, i) => (
                   <span
@@ -841,35 +840,33 @@ function Skills() {
 function Education() {
   const education = [
     {
-      degree: "Master Degree Computer Engineering",
+      degree: "Master's Degree in Computer Science",
       school: "EPITA (Paris & Strasbourg)",
       schoolUrl: "https://www.epita.fr/",
-      period: "2020.09 - 2025.09 (Present)",
+      period: "Sep 2020 - Sep 2025",
       location: "Paris & Strasbourg, France",
-      details: ["Currently pursuing final year"],
+      gpa: "3.7/4.0",
       gradient: "from-blue-500 to-cyan-500",
       status: "Current",
     },
     {
-      degree: "Erasmus Exchange Program",
+      degree: "Erasmus Exchange Program (Machine Learning, AI and Mathematical Modeling)",
       school: "Bahçeşehir University (Istanbul)",
       schoolUrl: "https://www.bahcesehir.edu.tr/",
-      period: "2024.07 - 2025.01",
+      period: "Jul 2024 - Jan 2025",
       location: "Istanbul, Turkey",
-      gpa: "3.92/4.00 GPA",
-      details: ["S9 Exchange Program", "Machine Learning, Big Data, Mathematical Modelling"],
-      gradient: "from-purple-500 to-pink-500",
+      gpa: "3.92/4.0",
+      gradient: "from-red-950 to-orange-300from-purple-500 to-pink-500",
       status: "Completed",
     },
     {
-      degree: "Erasmus Exchange Program",
+      degree: "Erasmus Exchange Program (Java, C, C++, and Python Programming)",
       school: "Bahçeşehir University (Istanbul)",
       schoolUrl: "https://www.bahcesehir.edu.tr/",
-      period: "2022.02 - 2022.07",
+      period: "Feb 2022 - Jul 2022",
       location: "Istanbul, Turkey",
-      gpa: "3.67/4.00 GPA",
-      details: ["S4 Exchange Program", "Java, C, C++, Python Programming"],
-      gradient: "from-emerald-500 to-teal-500",
+      gpa: "3.67/4.0",
+      gradient: "from-indigo-950 to-purple-300",
       status: "Completed",
     },
   ]
@@ -882,23 +879,28 @@ function Education() {
             <GraduationCap className="text-blue-400 relative" size={60} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Education</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">My academic journey and achievements</p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {education.map((edu, index) => (
             <Card
               key={index}
-              className="group relative will-change-transform bg-clip-text overflow-hidden p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 h-full flex flex-col"
+              className="group relative will-change-transform bg-clip-text overflow-hidden pt-8 pb-4 px-8 
+                        bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl 
+                        border border-gray-700/50 hover:border-gray-600/50 
+                        transition-all duration-300 transform hover:-translate-y-1 
+                        hover:shadow-2xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 
+                        h-full flex flex-col"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-2">
                 <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-3">
+                  <div className="flex items-center space-x-3 mb-2">
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${edu.gradient}`}></div>
                     <h3 className="text-2xl font-bold text-white">{edu.degree}</h3>
                   </div>
-                  <div className="flex items-center space-x-2 mb-2">
+                  <div className="flex items-center space-x-2 mb-1">
                     <School size={18} className="text-gray-400" />
                     <a
                       href={edu.schoolUrl}
@@ -906,42 +908,21 @@ function Education() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 hover:text-white transition-colors z-30"
                     >
-                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">
-                        {edu.school}
-                      </h4>
-                      <ExternalLink size={16} className="shrink-0 self-center text-gray-400 hover:text-white transition-colors"/>
+                      <h4 className="text-xl text-gray-300 hover:text-white font-medium">{edu.school}</h4>
+                      <ExternalLink
+                        size={16}
+                        className="shrink-0 self-center text-gray-400 hover:text-white transition-colors"
+                      />
                     </a>
+                    <span className="text-gray-400">-</span>
+                    <span className="text-lg text-gray-400 italic">{edu.location}</span>
                   </div>
-                  {edu.gpa && (
-                    <div className="flex items-center gap-2 text-xs text-emerald-400 mb-4 bg-emerald-500/10 px-4 py-2 rounded-full w-fit mt-4">
-                      <Award size={16} className="shrink-0 self-center"/>
-                      <span className="font-bold">{edu.gpa}</span>
-                    </div>
-                  )}
+                  {edu.gpa && <div className="text-emerald-400 text-sm font-medium mt-2 mb-2">GPA: {edu.gpa}</div>}
                 </div>
-                <div className="flex flex-col lg:items-end space-y-2 mt-4 lg:mt-0">
-                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <Calendar size={16} className="shrink-0 self-center"/>
-                    <span className="text-sm font-medium">{edu.period}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800/50 px-4 py-2 rounded-full">
-                    <MapPin size={16} className="shrink-0 self-center"/>
-                    <span className="text-sm font-medium">{edu.location}</span>
-                  </div>
+                <div className="flex flex-col lg:items-end mt-4 lg:mt-0">
+                  <span className="text-sm font-medium text-gray-400">{edu.period}</span>
                 </div>
               </div>
-
-              <ul className="space-y-3">
-                {edu.details.map((detail, detailIndex) => (
-                  <li key={detailIndex} className=" text-sm text-gray-300 flex items-start font-light leading-relaxed">
-                    <span
-                      className={`w-2 h-2 rounded-full bg-gradient-to-r ${edu.gradient} mr-4 mt-2 flex-shrink-0`}
-                    ></span>
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
-
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${edu.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
               ></div>
@@ -961,28 +942,28 @@ function Contact() {
       title: "Email",
       value: "enesekici6868@gmail.com",
       link: "mailto:enesekici6868@gmail.com",
-      gradient: "from-purple-500 to-purple-600",
+      gradient: "from-blue-950 to-cyan-300",
     },
     {
       icon: <Phone size={24} />,
       title: "Phone",
       value: "+33 7 69 35 93 93",
       link: "tel:+33769359393",
-      gradient: "from-emerald-500 to-emerald-600",
+      gradient: "from-red-950 to-orange-300",
     },
     {
       icon: <Linkedin size={24} />,
       title: "LinkedIn",
       value: "linkedin.com/in/enes-ekici",
       link: "https://www.linkedin.com/in/enes-ekici/",
-      gradient: "from-blue-500 to-blue-600",
+      gradient: "from-indigo-950 to-purple-300",
     },
     {
       icon: <Github size={24} />,
       title: "GitHub",
       value: "github.com/TRKirua",
       link: "https://github.com/TRKirua",
-      gradient: "from-red-500 to-red-600",
+      gradient: "from-green-950 to-emerald-300",
     },
   ]
 
@@ -994,7 +975,7 @@ function Contact() {
             <MessageCircle className="text-cyan-400 relative top-1" size={50} />
             <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight">Get In Touch</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Looking for a Computer Engineer? Let's connect and discuss opportunities
           </p>
@@ -1040,18 +1021,14 @@ function Contact() {
                   className="block"
                 >
                   <Card className="group relative will-change-transform bg-clip-text overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-br hover:from-gray-900/90 hover:to-gray-800/90 cursor-pointer transform hover:-translate-y-1 hover:-translate-x-1">
-                    <CardContent className="p-8">
+                    <CardContent className="px-6 py-5 md:px-8 md:py-6">
                       <div className="flex items-center space-x-6">
-                        <div
-                          className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white`}
-                        >
+                        <div className={`p-6 bg-gradient-to-r ${info.gradient} rounded-2xl text-white`}>
                           {info.icon}
                         </div>
                         <div className="flex-1">
                           <h4 className="font-bold text-white text-xl mb-2">{info.title}</h4>
-                          <p className="text-gray-400 group-hover:text-white transition-colors text-lg">
-                            {info.value}
-                          </p>
+                          <p className="text-gray-400 group-hover:text-white transition-colors text-lg">{info.value}</p>
                         </div>
                       </div>
                     </CardContent>
