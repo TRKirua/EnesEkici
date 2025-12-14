@@ -555,12 +555,13 @@ function Projects() {
                       Private
                     </button>
                   ) : (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <button className={`btn ${project.gradient}`}>
-                        <Github size={16} />
-                        See on GitHub
-                      </button>
-                    </a>
+                    <button
+                      className={`btn ${project.gradient}`}
+                      onClick={() => window.open(project.githubUrl, "_blank", "noopener,noreferrer")}
+                    >
+                      <Github size={16} />
+                      See on GitHub
+                    </button>
                   )}
                 </div>
               </div>

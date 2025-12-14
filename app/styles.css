@@ -1154,6 +1154,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .project-tag {
@@ -1558,7 +1560,6 @@ body {
 .footer {
   margin-top: 6rem;
   padding-top: 3rem;
-  border-top: 1px solid rgba(31, 41, 55, 0.5);
 }
 
 .footer-text {
