@@ -10,7 +10,6 @@ Welcome to the source code of my personal portfolio website, built to showcase m
 
 - **TypeScript** – For strong typing and cleaner development experience
 - **JavaScript** – For dynamic behavior and interactivity
-- **Tailwind CSS** – For fast and responsive styling with utility classes
 
 ---
 
