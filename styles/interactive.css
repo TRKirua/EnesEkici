@@ -1,0 +1,22 @@
+.nav-mobile-btn:hover,
+.theme-toggle:hover,
+.social-link:hover,
+.scroll-icon:hover,
+.project-tag:hover,
+.skill-item:hover,
+.btn:hover,
+.resume-link-inline:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+}
+
+.project-tag:hover,
+.skill-item:hover,
+.btn:hover,
+.resume-link-inline:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,33 @@
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #333333;
+  --card-bg: #000000;
+  --card-border: #333333;
+  --accent-color: #ffffff;
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: #ffffff;
+  --scrollbar-thumb-hover: #cccccc;
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --accent-color: #000000;
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #000000;
+  --scrollbar-thumb-hover: #333333;
+}
+
+/* The toggle renders both icons; the one matching the current theme is shown */
+[data-theme="light"] .icon-sun,
+:root:not([data-theme="light"]) .icon-moon {
+  display: none;
+}

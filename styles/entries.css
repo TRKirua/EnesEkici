@@ -1,0 +1,149 @@
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.entry-card {
+  padding: 2.5rem;
+}
+
+.entry-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entry-header-divided {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.entry-main {
+  flex: 1;
+}
+
+.entry-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.entry-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.entry-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.entry-org-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.entry-icon,
+.entry-external-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.entry-org-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  position: relative;
+  color: var(--text-primary);
+}
+
+.entry-org-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.entry-org-link:hover::after {
+  width: 100%;
+}
+
+.entry-org {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.entry-external-icon {
+  transition: transform 0.3s ease;
+}
+
+.entry-org-link:hover .entry-external-icon {
+  transform: translate(3px, -3px);
+}
+
+.entry-separator {
+  color: var(--text-secondary);
+}
+
+.entry-location {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.entry-period {
+  align-self: flex-start;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-primary);
+}
+
+.entry-bullets {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.entry-bullets li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.entry-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.entry-bullets li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+  .entry-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

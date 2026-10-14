@@ -8,8 +8,9 @@ Welcome to the source code of my personal portfolio, built to showcase my projec
 
 ## Technologies Used
 
-- **TypeScript**
-- **JavaScript**
+- **Next.js** (static export) · **React** · **TypeScript**
+- **lucide-react** (icons)
+- **GitHub Actions** → **GitHub Pages**
 
 ---
 
@@ -17,8 +18,28 @@ Welcome to the source code of my personal portfolio, built to showcase my projec
 
 * Responsive design
 * Clean UI
-* Fast loading
+* Fast loading (fully pre-rendered, no client-side loader)
+* SEO: metadata, Open Graph / Twitter cards, JSON-LD (Person), sitemap, robots
+* Accessible: semantic landmarks, skip link, reduced-motion support
 * Project showcase
+
+---
+
+## Project structure
+
+```
+app/                  layout, page, metadata routes (sitemap, robots), icons, Open Graph image
+components/
+  layout/             Navigation, ThemeToggle, Footer
+  sections/           Hero, Experience, Projects, Skills, Education, Contact
+  ui/                 SectionHeader, TimelineCard (shared building blocks)
+data/                 all the content (experience, education, projects, skills, socials) + types
+lib/                  JSON-LD structured data
+styles/               CSS split by concern, assembled in styles/index.css
+public/               static files (resume PDF)
+```
+
+To update the content, edit the files in `data/`.
 
 ---
 
@@ -28,6 +49,8 @@ Welcome to the source code of my personal portfolio, built to showcase my projec
 npm install
 npm run dev
 ```
+
+Checks: `npm run lint` · `npm run typecheck`
 
 ## Build
 
