@@ -6,6 +6,7 @@ export const PROJECTS: Project[] = [
     description:
       "Designed a lakehouse data pipeline with CSV ingestion to AWS S3. Implemented a Bronze/Silver/Gold architecture using Apache Spark and Iceberg tables. Integrated versioned data catalog with Nessie to manage table history and snapshots. Structured the project with Python scripts, analytical notebooks, and GitHub Actions CI.",
     tags: ["Spark", "Iceberg", "Nessie", "AWS", "Python", "ETL"],
+    githubUrl: "https://github.com/TRKirua/AWS-Iceberg-Nessie-Retail-Lakehouse",
   },
   {
     title: "Customer Review Analysis with PySpark (NLP)",
